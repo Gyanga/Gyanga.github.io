@@ -518,6 +518,42 @@
       </tags>
   </entry>
   <entry>
+    <title>webpack</title>
+    <url>/2024/01/11/webpack/</url>
+    <content><![CDATA[<h2 id="triangular-flag-on-post-webpack"><a href="#triangular-flag-on-post-webpack" class="headerlink" title=":triangular_flag_on_post:webpack"></a>:triangular_flag_on_post:webpack</h2><blockquote>
+<p>webpack是一个现代的JavaScript应用的静态模块打包工具</p>
+</blockquote>
+<ul>
+<li>模块</li>
+<li>打包</li>
+</ul>
+<p><img src="https://img.sky123.top/img/image-20200916170737157.png"></p>
+<h4 id="round-pushpin-前端模块化"><a href="#round-pushpin-前端模块化" class="headerlink" title=":round_pushpin:前端模块化"></a>:round_pushpin:前端模块化</h4><p>模块化：模块可以理解为把代码拆分成独立的代码块或文件，每个块能实现特定的功能；然后各自封装，隔离和组织这些模块。</p>
+<p>在ES6之前的模块加载器：CommonJS、ADM、CMD、UDM</p>
+<ul>
+<li>CommonJS：同步加载，适用于服务器，node、webpack使用</li>
+<li>ADM（Asynchronous Module Definition），异步模块定义，以浏览器为目标执行环境，实现核心为用函数包装模块定义，异步加载，浏览器使用，实现的requireJS想兼容服务器和浏览器，预加载</li>
+<li>CMD（Cmomon Module Definition），通用模块定义，异步加载，专注于浏览器，实现的是seaJS，使用时加载</li>
+<li>UMD（Universal Module Definition），通用模块定义，AMD和commonJS的结合，可以服务端使用也可以浏览器使用</li>
+</ul>
+<hr>
+<p>​        JavaScript文件、css、图片、JSON等等都可以被当作模块使用</p>
+<p>​		 webpack可以让我们进行模块化开发，并且会帮助处理模块间的依赖关系，将其进行整合打包</p>
+<h4 id="round-pushpin-打包"><a href="#round-pushpin-打包" class="headerlink" title=":round_pushpin:打包"></a>:round_pushpin:打包</h4><p>​		webpack中的各种资源模块可以打包成一个或多个包，在打包过程中会对资源进行处理，比如压缩图片，将SCSS转成css，将ES6语法转成ES5语法，将TypeScript转成JavaScript等操作</p>
+<h5 id="webpack与grunt-gulp的对比"><a href="#webpack与grunt-gulp的对比" class="headerlink" title="webpack与grunt&#x2F;gulp的对比"></a>webpack与grunt&#x2F;gulp的对比</h5><ul>
+<li>grunt&#x2F;gulp 也被称为前端自动化任务管理工具，其核心是Task，我们可以配置一系列的 task，并且定义 task 要处理的事务（例如 ES6、ts 转化，图片压缩，scss 转成 css）之后让 grunt&#x2F;gulp 来依次执行这些 task，而且让整个流程自动化</li>
+<li>webpack 更加强调模块化开发管理，而文件压缩合并、预处理等功能，是他附带的功能</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>uniapp开发规范</title>
     <url>/2024/01/11/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h2 id="oden-uniapp开发规范"><a href="#oden-uniapp开发规范" class="headerlink" title=":oden:uniapp开发规范"></a>:oden:<a href="https://uniapp.dcloud.io/frame?id=%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83">uniapp开发规范</a></h2><p>为了实现多端兼容，综合考虑编译速度、运行性能等因素，<code>uni-app</code> 约定了如下开发规范：</p>
@@ -753,59 +789,140 @@
       </tags>
   </entry>
   <entry>
-    <title>UML---类图</title>
-    <url>/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="bulb-类图简介"><a href="#bulb-类图简介" class="headerlink" title=":bulb:类图简介"></a>:bulb:类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
-<h2 id="bulb-类图结构"><a href="#bulb-类图结构" class="headerlink" title=":bulb:类图结构"></a>:bulb:类图结构</h2><p><img src="https://img-blog.csdnimg.cn/20210424151025861.JPG"><br><img src="https://img-blog.csdnimg.cn/20210424152520880.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br><em>指定接口的方式：再类名上方添加<interface></em></p>
-<h2 id="bulb-类图中的事物"><a href="#bulb-类图中的事物" class="headerlink" title=":bulb:类图中的事物"></a>:bulb:类图中的事物</h2><ul>
-<li>接口：一组操作的集合，只有操作的声明而没有实现</li>
-<li>抽象类：不能被实例化的类，一般至少包含一个抽象操作</li>
-<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类<br> <img src="https://img-blog.csdnimg.cn/20210424154652676.JPG"></li>
+    <title>了解Docker</title>
+    <url>/2024/01/11/%E4%BA%86%E8%A7%A3Docker/</url>
+    <content><![CDATA[<h2 id="了解Docker"><a href="#了解Docker" class="headerlink" title="了解Docker"></a>了解Docker</h2><p>Docker是一个开源的<code>应用容器引擎</code>，让开发者可以打包他们的应用以及依赖到一个<code>可移植</code>的容器中，然后发布到任何流行的Linux或Windows操作系统的机器上，也可以实现<code>虚拟化</code>，容器是完全使用<code>沙箱机制</code>，相互之间不会有任何接口</p>
+<p>一个完整的Docker有以下几个部分组成：</p>
+<ul>
+<li>DockerClient客户端</li>
+<li>Docker Daemon守护进程</li>
+<li>Docker Image镜像</li>
+<li>DockerContainer容器</li>
 </ul>
-<h2 id="bulb-类图中的关系及代码映射（java）"><a href="#bulb-类图中的关系及代码映射（java）" class="headerlink" title=":bulb:类图中的关系及代码映射（java）"></a>:bulb:类图中的关系及代码映射（java）</h2><ul>
-<li><p>类的映射<br> <img src="https://img-blog.csdnimg.cn/20210424163708231.png"><br>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>PS：来自百度百科（Docker的简介）</p>
+<h3 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h3><p>学习视频：<a href="https://www.bilibili.com/video/BV1og4y1q7M4?p=1">Docker最新超详细版教程</a></p>
+<p>参考文档：<a href="https://blog.sky123.top/2021/05/04/docker/Docker01%E6%A6%82%E8%BF%B0%E5%92%8C%E5%AE%89%E8%A3%85/">Docker的概述和安装</a></p>
+<p>Docker是基于<code>GO语言</code>开发的开源项目</p>
+<p>一些学习地址：</p>
+<ul>
+<li><p>官网：<a href="https://www.docker.com/">https://www.docker.com/</a></p>
 </li>
-<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类<br>  <img src="https://img-blog.csdnimg.cn/2021042416150334.png"></p>
+<li><p>文档：<a href="https://docs.docker.com/">https://docs.docker.com/</a></p>
+</li>
+<li><p>仓库：<a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
 </li>
 </ul>
-<p> 1.双向关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>   <span class="hljs-keyword">private</span> Customer customer;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>   2.单向关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>3.自关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>   <span class="hljs-keyword">private</span> Node subNode;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="Docker与虚拟机的比较"><a href="#Docker与虚拟机的比较" class="headerlink" title="Docker与虚拟机的比较"></a>Docker与虚拟机的比较</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115546688.png" style="zoom:33%;" />
 
+<p>PS：虚拟机技术</p>
+<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115733382.png" style="zoom:33%;" />
+
+<p>PS：Docker容器化技术</p>
+<ul>
+<li>传统虚拟机：虚拟出一系列硬件，运行一个完整的操作系统，然后在这个系统安装和运行软件</li>
+<li>容器内的应用直接运行在宿主机上，容器没有自己的内核，也没有虚拟出硬件，十分轻便</li>
+<li>每个容器都是相互隔离的，每个容器都有属于自己的文件系统，互不影响</li>
+</ul>
+<h4 id="Docker基本组成"><a href="#Docker基本组成" class="headerlink" title="Docker基本组成"></a>Docker基本组成</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210221182251636.png" style="zoom:50%;" />
+
+<p>基本概念：</p>
+<ul>
+<li><p>镜像（image）：docker镜像可以比作一个模板，可以通过这个模板创建容器服务，tomcat镜像→run→tomcat01容器，通过镜像可以创建多个容器（最终服务运行或项目运行就是在容器中）</p>
+</li>
+<li><p>容器（container）：docker利用容器技术，独立地运行一个或一组应用，通过image来创建</p>
+<p>启动、停止、删除等基本命令</p>
+<p>PS：可以蒋容器理解为一个简单的Linux系统</p>
+</li>
+<li><p>仓库（repository）：仓库是存放镜像的地方，有公有和私有仓库之分</p>
+<p>PS：Docker Hub（默认是国外的），阿里云等平台都有容器服务器（配置镜像加速）</p>
+</li>
+</ul>
+<h4 id="Docker作用"><a href="#Docker作用" class="headerlink" title="Docker作用"></a>Docker作用</h4><p>可以实现<code>DevOps</code>（开发，运维）</p>
+<ul>
+<li>应用更快速的交付和部署：打包镜像发布测试，一键运行</li>
+<li>更便捷的升级和扩缩容：使用Docker，部署像搭积木一样，项目打包为一个镜像，方便扩展</li>
+<li>更简单的系统运维：在容器化之后，开发和测试环境都是高度一致的</li>
+<li>更高效的计算资源利用：Docker是内核级别的虚拟化，可以在一个物理机上运行多个容器实例，容器的性能可以被压榨到极致</li>
+</ul>
+<h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><ul>
+<li>Linux操作系统</li>
+<li>Xshell（连接远程服务器）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">查看系统内核(系统内核3.10以上的)</span><br>uname -r<br><span class="hljs-meta prompt_">#</span><span class="language-bash">查看系统信息</span><br>cat /etc/os-release<br></code></pre></td></tr></table></figure>
+
+<h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><p>官网安装文档：<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></p>
+<h5 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统"></a>CentOS系统</h5><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">卸载旧版本Docker系统（如果有点话）</span><br>sudo yum remove docker\<br><span class="hljs-meta prompt_">#</span><span class="language-bash">安装需要的安装包</span><br>yum install -y yum-utils<br><span class="hljs-meta prompt_">#</span><span class="language-bash">配置下载Docker镜像</span><br>sudo yum-config-manager\<br>   --add-repo\<br>    https://download.docker.com/linux/centos/docker-ce.repo<br><span class="hljs-meta prompt_">#</span><span class="language-bash">安装docker，一路输入确定安装即可</span><br>sudo yum install docker-ce docker-ce-li containerd.io<br></code></pre></td></tr></table></figure>
+
+<h4 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">查看docker是否安装成功和版本</span><br>docker -v<br><span class="hljs-meta prompt_">#</span><span class="language-bash">启动docker</span><br>systemctl start docker<br><span class="hljs-meta prompt_">#</span><span class="language-bash">运行测试</span><br>docker run hello-world<br><span class="hljs-meta prompt_">#</span><span class="language-bash">查看下载的hello-world镜像</span><br>docker images<br></code></pre></td></tr></table></figure>
+
+<h4 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">卸载</span><br>yum remove docker-ce docker-ce-li containerd.io<br><span class="hljs-meta prompt_">#</span><span class="language-bash">删除文件(/var/lib/docker时是docker的默认工作路径)</span><br>rm -rf /var/lib/docker<br></code></pre></td></tr></table></figure>
+
+<h4 id="Docker配置阿里云镜像仓库地址"><a href="#Docker配置阿里云镜像仓库地址" class="headerlink" title="Docker配置阿里云镜像仓库地址"></a>Docker配置阿里云镜像仓库地址</h4><p>参考教程：<a href="https://www.cnblogs.com/allenjing/p/12575972.html">https://www.cnblogs.com/allenjing/p/12575972.html</a></p>
+<ul>
+<li>登录阿里云找到容器镜像服务</li>
+<li>选择镜像加速器复制加速器地址</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">sudo mkdir -p /etc/docker<br>sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;<br>&#123;<br>  &quot;registry-mirrors&quot;:[&quot;https://bjyjzfeq.mirror.aliyuncs.com&quot;]<br>&#125;<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
+
+<h4 id="Docker运行原理"><a href="#Docker运行原理" class="headerlink" title="Docker运行原理"></a>Docker运行原理</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210428121520142.png" style="zoom: 67%;" />
+
+<h5 id="底层原理："><a href="#底层原理：" class="headerlink" title="底层原理："></a>底层原理：</h5><p>Docker工作原理：Docker是一个<code>CS结构</code>的系统，Docker的守护进程运行在主机上，通过Socket从客户端访问</p>
+<p>DockerServer接收到DockerClient的指令，就会执行这个命令</p>
+<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210428122527218.png" style="zoom:67%;" />
+
+<h3 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h3><h4 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">显示版本</span><br>docker version<br><span class="hljs-meta prompt_">#</span><span class="language-bash">显示Docker的系统信息</span><br>docker info<br><span class="hljs-meta prompt_">#</span><span class="language-bash">帮助信息</span><br>docker --help<br>Commands:<br>  attach     # 当前 shell 下 attach 连接指定运行镜像 <br>  build      # 通过 dokcerfile 定制镜像 <br>  commit     # 提交当前容器为新的镜像 <br>  cp         # 从容器中拷贝指定文件或目录到宿主机 <br>  create     # 创建一个新的容器 ，同 run ，但不会启动容器 <br>  diff       # 查看 docker 容器变化 <br>  events     # 从 docker 服务器获取容器实时事件 <br>  exec       # 在已存在的容器上运行命令 <br>  export     # 导出容器的内容流作为一个 tar 归档文件（对应 import）<br>  history    # 展示镜像的形成历史 <br>  images     # 列出系统当前所有镜像 <br>  import     # 从 tar 包中的内容创建一个新的文件系统映像（对应 export）<br>  info       # 查看系统相关信息 <br>  inspect    # 查看容器详细信息 <br>  kill       #kill 指定的 docker 容器 <br>  load       # 从一个 tar 包中加载一个镜像（对应 save）<br>  login      # 注册或登陆一个 docker 源服务器 <br>  logout     # 登出当前源服务器 <br>  logs       # 输出当前容器的日志内容 <br>  pause      # 暂停容器 <br>  port       # 查看映射端口对应的容器内部源端口 <br>  ps         # 列出容器列表 <br>  pull       # 从 docker 镜像源服务器拉取指定镜像或库镜像 <br>  push       # 推送指定镜像或者库镜像到 docker 源服务器 <br>  rename     #<br>  restart    # 重启运行的容器 <br>  rm         # 移除一个或多个容器 <br>  rmi        # 移除一个或多个镜像 <br>  run        # 创建一个新的容器并运行一个命令 <br>  save       # 保存一个镜像为一个 tar (对应 load)<br>  search     # 在 docker hub 中搜索镜像 <br>  start      # 启动容器 <br>  stop       # 停止容器 <br>  tag        # 给源镜像打标签 <br>  top        # 查看容器中运行的进程消息 <br>  unpause    # 取消暂停容器 <br>  version    # 查看容器版本号 <br>  wait       # 获取容器停止时的退出状态值 <br><br></code></pre></td></tr></table></figure>
+
+<h4 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h4><ul>
+<li>docker images</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">主机上的所有本地镜像</span><br>docker images help<br>REPOSITORY   TAG       IMAGE ID   CREATED   SIZE<br><span class="hljs-meta prompt_"># </span><span class="language-bash">解释</span> <br>REPOSITORY：镜像的仓库源   <br>TAG：镜像的标签 <br>IMAGE ID：镜像的 ID   <br>CREATED：创建时间   <br>SIZE：大小 <br><span class="hljs-meta prompt_"># </span><span class="language-bash">可选项</span> <br>-a   --all # 列出所有镜像 <br>-q   --quiet # 只列出镜像的 ID<br>docker images<br>REPOSITORY    TAG       IMAGE ID       CREATED        SIZE<br>hello-world   latest    feb5d9fea6a5   2 months ago   13.3kB<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br> eg:学校类与学生类<br> <img src="https://img-blog.csdnimg.cn/20210424171005963.png"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在<br>eg:窗口类和菜单类<br><img src="https://img-blog.csdnimg.cn/20210424171101192.png"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）<br><img src="https://img-blog.csdnimg.cn/2021042417121472.png"></p>
-</li>
+<li>docker search</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>依赖关系有如下三种情况：<br>     1、A类是B类中的（某中方法的）局部变量；<br>      2、A类是B类方法当中的一个参数；<br>     3、A类向B类发送消息，从而影响B类发生变化</p>
-<ul>
-<li>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</li>
-</ul>
-<p> 要求：<br>     1、子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；<br>     2、子类中除了与父类一致的信息以外，还包括额外的信息；<br>     3、可以使用父类的实例的地方，也可以使用子类的实例；</p>
-   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Tiger</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">搜索镜像</span><br>docker search hello-world<br><span class="hljs-meta prompt_">#</span><span class="language-bash">搜索镜像的star&gt;1000的镜像</span><br>docker search hello-world --filter=stars=3000<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>实现关系（Realization）：接口和实现类的关系（实现类指向接口）<br><img src="https://img-blog.csdnimg.cn/20210424170019420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>docker pull</li>
 </ul>
-<h2 id="bulb-生动形象的实例"><a href="#bulb-生动形象的实例" class="headerlink" title=":bulb:生动形象的实例"></a>:bulb:生动形象的实例</h2><p><img src="https://img-blog.csdnimg.cn/20210424163039410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br>:pushpin:图源：<a href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a><br>:pushpin:参考博客：<a href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">下载镜像[:tag]  (不写tag默认就是latest)</span><br>docker pull mysql<br><span class="hljs-meta prompt_">#</span><span class="language-bash">等价写法 (docker.io/library/mysql:latest为存放的镜像的文件真实地址)</span><br>docker pull docker.io/library/mysql:latest<br><span class="hljs-meta prompt_">#</span><span class="language-bash">下载指定版本</span><br>docker pull mysql:5.7<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>docker rmi</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">删除镜像</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">docker rmi 镜像 ID [镜像 ID,...]   删除没有运行容器的镜像</span><br>docker rmi bbf6571db497<br><span class="hljs-meta prompt_">#</span><span class="language-bash">docker rmi -f 镜像 ID [镜像 ID,...]  删除连带删除容器的镜像</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">docker rmi -f $(docker images -aq)  删除所有容器和镜像</span> <br></code></pre></td></tr></table></figure>
+
+<h4 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">前置环境：下载一个centos镜像</span><br>docker pull centos<br><span class="hljs-meta prompt_">#</span><span class="language-bash">新建并运行容器</span><br>docker run --help<br>docker run -it centos /bin/bash<br><span class="hljs-meta prompt_">#</span><span class="language-bash">列出所有运行的容器</span><br>docker ps<br><span class="hljs-meta prompt_">#</span><span class="language-bash">-q 只显示容器编号，-a 列出当前正在运行的容器+带出历史运行过的容器，-n=? 显示最新常见的容器的个数</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">直接容器停止并退出</span><br>exit<br><span class="hljs-meta prompt_">#</span><span class="language-bash">容器不停止而退出</span><br>Ctrl+P+Q<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>删除容器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">删除指定的容器，<span class="hljs-built_in">rm</span> -f 表示强制删除正在运行的容器</span> <br>docker rm [-f] 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除所有的容器</span> <br>docker rm -f $(docker ps -aq)<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除所有容器</span><br>docker ps -a -q|xargs docker rm <br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>启动停止容器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">启动容器</span> <br>docker start 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">重启容器</span> <br>docker restart 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">停止正在运行的容器</span><br>docker stop 容器 ID  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">强制停止当前运行的容器</span><br>docker kill 容器 ID  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">后台启动容器</span><br>docker run -d centos<br></code></pre></td></tr></table></figure>
+
+<p>常见问题：-d 运行之后，docker ps 发现它并没有运行 </p>
+<p>原因：docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止 </p>
+<p>nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了。</p>
+<ul>
+<li>查看容器进程的信息</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">docker top 018801a5cdcf<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查看镜像中的元数据</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> inspect <span class="hljs-number">018801</span>a5cdcf <br></code></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>软件工程</category>
+        <category>Docker</category>
       </categories>
       <tags>
-        <tag>UML</tag>
-        <tag>类图</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -974,179 +1091,6 @@
       </tags>
   </entry>
   <entry>
-    <title>webpack</title>
-    <url>/2024/01/11/webpack/</url>
-    <content><![CDATA[<h2 id="triangular-flag-on-post-webpack"><a href="#triangular-flag-on-post-webpack" class="headerlink" title=":triangular_flag_on_post:webpack"></a>:triangular_flag_on_post:webpack</h2><blockquote>
-<p>webpack是一个现代的JavaScript应用的静态模块打包工具</p>
-</blockquote>
-<ul>
-<li>模块</li>
-<li>打包</li>
-</ul>
-<p><img src="https://img.sky123.top/img/image-20200916170737157.png"></p>
-<h4 id="round-pushpin-前端模块化"><a href="#round-pushpin-前端模块化" class="headerlink" title=":round_pushpin:前端模块化"></a>:round_pushpin:前端模块化</h4><p>模块化：模块可以理解为把代码拆分成独立的代码块或文件，每个块能实现特定的功能；然后各自封装，隔离和组织这些模块。</p>
-<p>在ES6之前的模块加载器：CommonJS、ADM、CMD、UDM</p>
-<ul>
-<li>CommonJS：同步加载，适用于服务器，node、webpack使用</li>
-<li>ADM（Asynchronous Module Definition），异步模块定义，以浏览器为目标执行环境，实现核心为用函数包装模块定义，异步加载，浏览器使用，实现的requireJS想兼容服务器和浏览器，预加载</li>
-<li>CMD（Cmomon Module Definition），通用模块定义，异步加载，专注于浏览器，实现的是seaJS，使用时加载</li>
-<li>UMD（Universal Module Definition），通用模块定义，AMD和commonJS的结合，可以服务端使用也可以浏览器使用</li>
-</ul>
-<hr>
-<p>​        JavaScript文件、css、图片、JSON等等都可以被当作模块使用</p>
-<p>​		 webpack可以让我们进行模块化开发，并且会帮助处理模块间的依赖关系，将其进行整合打包</p>
-<h4 id="round-pushpin-打包"><a href="#round-pushpin-打包" class="headerlink" title=":round_pushpin:打包"></a>:round_pushpin:打包</h4><p>​		webpack中的各种资源模块可以打包成一个或多个包，在打包过程中会对资源进行处理，比如压缩图片，将SCSS转成css，将ES6语法转成ES5语法，将TypeScript转成JavaScript等操作</p>
-<h5 id="webpack与grunt-gulp的对比"><a href="#webpack与grunt-gulp的对比" class="headerlink" title="webpack与grunt&#x2F;gulp的对比"></a>webpack与grunt&#x2F;gulp的对比</h5><ul>
-<li>grunt&#x2F;gulp 也被称为前端自动化任务管理工具，其核心是Task，我们可以配置一系列的 task，并且定义 task 要处理的事务（例如 ES6、ts 转化，图片压缩，scss 转成 css）之后让 grunt&#x2F;gulp 来依次执行这些 task，而且让整个流程自动化</li>
-<li>webpack 更加强调模块化开发管理，而文件压缩合并、预处理等功能，是他附带的功能</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>webpack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>了解Docker</title>
-    <url>/2024/01/11/%E4%BA%86%E8%A7%A3Docker/</url>
-    <content><![CDATA[<h2 id="了解Docker"><a href="#了解Docker" class="headerlink" title="了解Docker"></a>了解Docker</h2><p>Docker是一个开源的<code>应用容器引擎</code>，让开发者可以打包他们的应用以及依赖到一个<code>可移植</code>的容器中，然后发布到任何流行的Linux或Windows操作系统的机器上，也可以实现<code>虚拟化</code>，容器是完全使用<code>沙箱机制</code>，相互之间不会有任何接口</p>
-<p>一个完整的Docker有以下几个部分组成：</p>
-<ul>
-<li>DockerClient客户端</li>
-<li>Docker Daemon守护进程</li>
-<li>Docker Image镜像</li>
-<li>DockerContainer容器</li>
-</ul>
-<p>PS：来自百度百科（Docker的简介）</p>
-<h3 id="Docker概述"><a href="#Docker概述" class="headerlink" title="Docker概述"></a>Docker概述</h3><p>学习视频：<a href="https://www.bilibili.com/video/BV1og4y1q7M4?p=1">Docker最新超详细版教程</a></p>
-<p>参考文档：<a href="https://blog.sky123.top/2021/05/04/docker/Docker01%E6%A6%82%E8%BF%B0%E5%92%8C%E5%AE%89%E8%A3%85/">Docker的概述和安装</a></p>
-<p>Docker是基于<code>GO语言</code>开发的开源项目</p>
-<p>一些学习地址：</p>
-<ul>
-<li><p>官网：<a href="https://www.docker.com/">https://www.docker.com/</a></p>
-</li>
-<li><p>文档：<a href="https://docs.docker.com/">https://docs.docker.com/</a></p>
-</li>
-<li><p>仓库：<a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
-</li>
-</ul>
-<h4 id="Docker与虚拟机的比较"><a href="#Docker与虚拟机的比较" class="headerlink" title="Docker与虚拟机的比较"></a>Docker与虚拟机的比较</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115546688.png" style="zoom:33%;" />
-
-<p>PS：虚拟机技术</p>
-<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115733382.png" style="zoom:33%;" />
-
-<p>PS：Docker容器化技术</p>
-<ul>
-<li>传统虚拟机：虚拟出一系列硬件，运行一个完整的操作系统，然后在这个系统安装和运行软件</li>
-<li>容器内的应用直接运行在宿主机上，容器没有自己的内核，也没有虚拟出硬件，十分轻便</li>
-<li>每个容器都是相互隔离的，每个容器都有属于自己的文件系统，互不影响</li>
-</ul>
-<h4 id="Docker基本组成"><a href="#Docker基本组成" class="headerlink" title="Docker基本组成"></a>Docker基本组成</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210221182251636.png" style="zoom:50%;" />
-
-<p>基本概念：</p>
-<ul>
-<li><p>镜像（image）：docker镜像可以比作一个模板，可以通过这个模板创建容器服务，tomcat镜像→run→tomcat01容器，通过镜像可以创建多个容器（最终服务运行或项目运行就是在容器中）</p>
-</li>
-<li><p>容器（container）：docker利用容器技术，独立地运行一个或一组应用，通过image来创建</p>
-<p>启动、停止、删除等基本命令</p>
-<p>PS：可以蒋容器理解为一个简单的Linux系统</p>
-</li>
-<li><p>仓库（repository）：仓库是存放镜像的地方，有公有和私有仓库之分</p>
-<p>PS：Docker Hub（默认是国外的），阿里云等平台都有容器服务器（配置镜像加速）</p>
-</li>
-</ul>
-<h4 id="Docker作用"><a href="#Docker作用" class="headerlink" title="Docker作用"></a>Docker作用</h4><p>可以实现<code>DevOps</code>（开发，运维）</p>
-<ul>
-<li>应用更快速的交付和部署：打包镜像发布测试，一键运行</li>
-<li>更便捷的升级和扩缩容：使用Docker，部署像搭积木一样，项目打包为一个镜像，方便扩展</li>
-<li>更简单的系统运维：在容器化之后，开发和测试环境都是高度一致的</li>
-<li>更高效的计算资源利用：Docker是内核级别的虚拟化，可以在一个物理机上运行多个容器实例，容器的性能可以被压榨到极致</li>
-</ul>
-<h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><ul>
-<li>Linux操作系统</li>
-<li>Xshell（连接远程服务器）</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">查看系统内核(系统内核3.10以上的)</span><br>uname -r<br><span class="hljs-meta prompt_">#</span><span class="language-bash">查看系统信息</span><br>cat /etc/os-release<br></code></pre></td></tr></table></figure>
-
-<h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><p>官网安装文档：<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></p>
-<h5 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统"></a>CentOS系统</h5><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">卸载旧版本Docker系统（如果有点话）</span><br>sudo yum remove docker\<br><span class="hljs-meta prompt_">#</span><span class="language-bash">安装需要的安装包</span><br>yum install -y yum-utils<br><span class="hljs-meta prompt_">#</span><span class="language-bash">配置下载Docker镜像</span><br>sudo yum-config-manager\<br>   --add-repo\<br>    https://download.docker.com/linux/centos/docker-ce.repo<br><span class="hljs-meta prompt_">#</span><span class="language-bash">安装docker，一路输入确定安装即可</span><br>sudo yum install docker-ce docker-ce-li containerd.io<br></code></pre></td></tr></table></figure>
-
-<h4 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">查看docker是否安装成功和版本</span><br>docker -v<br><span class="hljs-meta prompt_">#</span><span class="language-bash">启动docker</span><br>systemctl start docker<br><span class="hljs-meta prompt_">#</span><span class="language-bash">运行测试</span><br>docker run hello-world<br><span class="hljs-meta prompt_">#</span><span class="language-bash">查看下载的hello-world镜像</span><br>docker images<br></code></pre></td></tr></table></figure>
-
-<h4 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">卸载</span><br>yum remove docker-ce docker-ce-li containerd.io<br><span class="hljs-meta prompt_">#</span><span class="language-bash">删除文件(/var/lib/docker时是docker的默认工作路径)</span><br>rm -rf /var/lib/docker<br></code></pre></td></tr></table></figure>
-
-<h4 id="Docker配置阿里云镜像仓库地址"><a href="#Docker配置阿里云镜像仓库地址" class="headerlink" title="Docker配置阿里云镜像仓库地址"></a>Docker配置阿里云镜像仓库地址</h4><p>参考教程：<a href="https://www.cnblogs.com/allenjing/p/12575972.html">https://www.cnblogs.com/allenjing/p/12575972.html</a></p>
-<ul>
-<li>登录阿里云找到容器镜像服务</li>
-<li>选择镜像加速器复制加速器地址</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">sudo mkdir -p /etc/docker<br>sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;<br>&#123;<br>  &quot;registry-mirrors&quot;:[&quot;https://bjyjzfeq.mirror.aliyuncs.com&quot;]<br>&#125;<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
-
-<h4 id="Docker运行原理"><a href="#Docker运行原理" class="headerlink" title="Docker运行原理"></a>Docker运行原理</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210428121520142.png" style="zoom: 67%;" />
-
-<h5 id="底层原理："><a href="#底层原理：" class="headerlink" title="底层原理："></a>底层原理：</h5><p>Docker工作原理：Docker是一个<code>CS结构</code>的系统，Docker的守护进程运行在主机上，通过Socket从客户端访问</p>
-<p>DockerServer接收到DockerClient的指令，就会执行这个命令</p>
-<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210428122527218.png" style="zoom:67%;" />
-
-<h3 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h3><h4 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">显示版本</span><br>docker version<br><span class="hljs-meta prompt_">#</span><span class="language-bash">显示Docker的系统信息</span><br>docker info<br><span class="hljs-meta prompt_">#</span><span class="language-bash">帮助信息</span><br>docker --help<br>Commands:<br>  attach     # 当前 shell 下 attach 连接指定运行镜像 <br>  build      # 通过 dokcerfile 定制镜像 <br>  commit     # 提交当前容器为新的镜像 <br>  cp         # 从容器中拷贝指定文件或目录到宿主机 <br>  create     # 创建一个新的容器 ，同 run ，但不会启动容器 <br>  diff       # 查看 docker 容器变化 <br>  events     # 从 docker 服务器获取容器实时事件 <br>  exec       # 在已存在的容器上运行命令 <br>  export     # 导出容器的内容流作为一个 tar 归档文件（对应 import）<br>  history    # 展示镜像的形成历史 <br>  images     # 列出系统当前所有镜像 <br>  import     # 从 tar 包中的内容创建一个新的文件系统映像（对应 export）<br>  info       # 查看系统相关信息 <br>  inspect    # 查看容器详细信息 <br>  kill       #kill 指定的 docker 容器 <br>  load       # 从一个 tar 包中加载一个镜像（对应 save）<br>  login      # 注册或登陆一个 docker 源服务器 <br>  logout     # 登出当前源服务器 <br>  logs       # 输出当前容器的日志内容 <br>  pause      # 暂停容器 <br>  port       # 查看映射端口对应的容器内部源端口 <br>  ps         # 列出容器列表 <br>  pull       # 从 docker 镜像源服务器拉取指定镜像或库镜像 <br>  push       # 推送指定镜像或者库镜像到 docker 源服务器 <br>  rename     #<br>  restart    # 重启运行的容器 <br>  rm         # 移除一个或多个容器 <br>  rmi        # 移除一个或多个镜像 <br>  run        # 创建一个新的容器并运行一个命令 <br>  save       # 保存一个镜像为一个 tar (对应 load)<br>  search     # 在 docker hub 中搜索镜像 <br>  start      # 启动容器 <br>  stop       # 停止容器 <br>  tag        # 给源镜像打标签 <br>  top        # 查看容器中运行的进程消息 <br>  unpause    # 取消暂停容器 <br>  version    # 查看容器版本号 <br>  wait       # 获取容器停止时的退出状态值 <br><br></code></pre></td></tr></table></figure>
-
-<h4 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h4><ul>
-<li>docker images</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">主机上的所有本地镜像</span><br>docker images help<br>REPOSITORY   TAG       IMAGE ID   CREATED   SIZE<br><span class="hljs-meta prompt_"># </span><span class="language-bash">解释</span> <br>REPOSITORY：镜像的仓库源   <br>TAG：镜像的标签 <br>IMAGE ID：镜像的 ID   <br>CREATED：创建时间   <br>SIZE：大小 <br><span class="hljs-meta prompt_"># </span><span class="language-bash">可选项</span> <br>-a   --all # 列出所有镜像 <br>-q   --quiet # 只列出镜像的 ID<br>docker images<br>REPOSITORY    TAG       IMAGE ID       CREATED        SIZE<br>hello-world   latest    feb5d9fea6a5   2 months ago   13.3kB<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>docker search</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">搜索镜像</span><br>docker search hello-world<br><span class="hljs-meta prompt_">#</span><span class="language-bash">搜索镜像的star&gt;1000的镜像</span><br>docker search hello-world --filter=stars=3000<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>docker pull</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">下载镜像[:tag]  (不写tag默认就是latest)</span><br>docker pull mysql<br><span class="hljs-meta prompt_">#</span><span class="language-bash">等价写法 (docker.io/library/mysql:latest为存放的镜像的文件真实地址)</span><br>docker pull docker.io/library/mysql:latest<br><span class="hljs-meta prompt_">#</span><span class="language-bash">下载指定版本</span><br>docker pull mysql:5.7<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>docker rmi</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">删除镜像</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">docker rmi 镜像 ID [镜像 ID,...]   删除没有运行容器的镜像</span><br>docker rmi bbf6571db497<br><span class="hljs-meta prompt_">#</span><span class="language-bash">docker rmi -f 镜像 ID [镜像 ID,...]  删除连带删除容器的镜像</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">docker rmi -f $(docker images -aq)  删除所有容器和镜像</span> <br></code></pre></td></tr></table></figure>
-
-<h4 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">前置环境：下载一个centos镜像</span><br>docker pull centos<br><span class="hljs-meta prompt_">#</span><span class="language-bash">新建并运行容器</span><br>docker run --help<br>docker run -it centos /bin/bash<br><span class="hljs-meta prompt_">#</span><span class="language-bash">列出所有运行的容器</span><br>docker ps<br><span class="hljs-meta prompt_">#</span><span class="language-bash">-q 只显示容器编号，-a 列出当前正在运行的容器+带出历史运行过的容器，-n=? 显示最新常见的容器的个数</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">直接容器停止并退出</span><br>exit<br><span class="hljs-meta prompt_">#</span><span class="language-bash">容器不停止而退出</span><br>Ctrl+P+Q<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>删除容器</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">删除指定的容器，<span class="hljs-built_in">rm</span> -f 表示强制删除正在运行的容器</span> <br>docker rm [-f] 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除所有的容器</span> <br>docker rm -f $(docker ps -aq)<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除所有容器</span><br>docker ps -a -q|xargs docker rm <br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>启动停止容器</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">启动容器</span> <br>docker start 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">重启容器</span> <br>docker restart 容器 ID <br><span class="hljs-meta prompt_"># </span><span class="language-bash">停止正在运行的容器</span><br>docker stop 容器 ID  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">强制停止当前运行的容器</span><br>docker kill 容器 ID  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">后台启动容器</span><br>docker run -d centos<br></code></pre></td></tr></table></figure>
-
-<p>常见问题：-d 运行之后，docker ps 发现它并没有运行 </p>
-<p>原因：docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用，就会自动停止 </p>
-<p>nginx 容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了。</p>
-<ul>
-<li>查看容器进程的信息</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">docker top 018801a5cdcf<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>查看镜像中的元数据</li>
-</ul>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> inspect <span class="hljs-number">018801</span>a5cdcf <br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>初识Electron</title>
     <url>/2024/01/11/%E5%88%9D%E8%AF%86Electron/</url>
     <content><![CDATA[<h2 id="初识Electron"><a href="#初识Electron" class="headerlink" title="初识Electron"></a>初识Electron</h2><p>​      Electron是一个JavaScript、HTML、CSS构建桌面应用程序的框架。通过将Chromium和Node.js嵌入到它的二进制文件中，Electron允许维护一个JavaScript代码库并创建可在Windows、macOS、Linux上运行的跨平台应用程序——无需本地开发经验。</p>
@@ -1231,6 +1175,62 @@
       </categories>
       <tags>
         <tag>Electron</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UML---类图</title>
+    <url>/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="bulb-类图简介"><a href="#bulb-类图简介" class="headerlink" title=":bulb:类图简介"></a>:bulb:类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
+<h2 id="bulb-类图结构"><a href="#bulb-类图结构" class="headerlink" title=":bulb:类图结构"></a>:bulb:类图结构</h2><p><img src="https://img-blog.csdnimg.cn/20210424151025861.JPG"><br><img src="https://img-blog.csdnimg.cn/20210424152520880.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br><em>指定接口的方式：再类名上方添加<interface></em></p>
+<h2 id="bulb-类图中的事物"><a href="#bulb-类图中的事物" class="headerlink" title=":bulb:类图中的事物"></a>:bulb:类图中的事物</h2><ul>
+<li>接口：一组操作的集合，只有操作的声明而没有实现</li>
+<li>抽象类：不能被实例化的类，一般至少包含一个抽象操作</li>
+<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类<br> <img src="https://img-blog.csdnimg.cn/20210424154652676.JPG"></li>
+</ul>
+<h2 id="bulb-类图中的关系及代码映射（java）"><a href="#bulb-类图中的关系及代码映射（java）" class="headerlink" title=":bulb:类图中的关系及代码映射（java）"></a>:bulb:类图中的关系及代码映射（java）</h2><ul>
+<li><p>类的映射<br> <img src="https://img-blog.csdnimg.cn/20210424163708231.png"><br>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类<br>  <img src="https://img-blog.csdnimg.cn/2021042416150334.png"></p>
+</li>
+</ul>
+<p> 1.双向关联</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>   <span class="hljs-keyword">private</span> Customer customer;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>   2.单向关联</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>3.自关联</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>   <span class="hljs-keyword">private</span> Node subNode;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br> eg:学校类与学生类<br> <img src="https://img-blog.csdnimg.cn/20210424171005963.png"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在<br>eg:窗口类和菜单类<br><img src="https://img-blog.csdnimg.cn/20210424171101192.png"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）<br><img src="https://img-blog.csdnimg.cn/2021042417121472.png"></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>依赖关系有如下三种情况：<br>     1、A类是B类中的（某中方法的）局部变量；<br>      2、A类是B类方法当中的一个参数；<br>     3、A类向B类发送消息，从而影响B类发生变化</p>
+<ul>
+<li>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</li>
+</ul>
+<p> 要求：<br>     1、子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；<br>     2、子类中除了与父类一致的信息以外，还包括额外的信息；<br>     3、可以使用父类的实例的地方，也可以使用子类的实例；</p>
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Tiger</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<ul>
+<li>实现关系（Realization）：接口和实现类的关系（实现类指向接口）<br><img src="https://img-blog.csdnimg.cn/20210424170019420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="bulb-生动形象的实例"><a href="#bulb-生动形象的实例" class="headerlink" title=":bulb:生动形象的实例"></a>:bulb:生动形象的实例</h2><p><img src="https://img-blog.csdnimg.cn/20210424163039410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br>:pushpin:图源：<a href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a><br>:pushpin:参考博客：<a href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+      </categories>
+      <tags>
+        <tag>UML</tag>
+        <tag>类图</tag>
       </tags>
   </entry>
 </search>
