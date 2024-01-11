@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Archive - Gyang&#39;s personal space</title>
+  <title>webpack - Gyang&#39;s personal space</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content=":triangular_flag_on_post:we...">
   <meta name="author" content="Gyanga">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -152,7 +152,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">归档</div>
+    <div class="center">webpack</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -172,7 +172,7 @@
       </li><li class="menu-item">
         <a href="/galleries/ " class="underline "> 图册</a>
       </li><li class="menu-item">
-        <a href="/archives/ " class="underline active"> 归档</a>
+        <a href="/archives/ " class="underline "> 归档</a>
       </li><li class="menu-item">
         <a href="/tags/ " class="underline "> 标签</a>
       </li><li class="menu-item">
@@ -186,67 +186,90 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total">归档: 8 篇</h3>
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/jKMvSQd2cWwdCyfvrQGjPmySNW4.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">webpack</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 11, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>911</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+          <p>webpack是一个现代的JavaScript应用的静态模块打包工具</p>
+        
+        <h2 id="triangular-flag-on-post-webpack"><a href="#triangular-flag-on-post-webpack" class="headerlink" title=":triangular_flag_on_post:webpack"></a>:triangular_flag_on_post:webpack</h2><blockquote>
+<p>webpack是一个现代的JavaScript应用的静态模块打包工具</p>
+</blockquote>
+<ul>
+<li>模块</li>
+<li>打包</li>
+</ul>
+<p><img    class="lazyload" data-original="https://img.sky123.top/img/image-20200916170737157.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<h4 id="round-pushpin-前端模块化"><a href="#round-pushpin-前端模块化" class="headerlink" title=":round_pushpin:前端模块化"></a>:round_pushpin:前端模块化</h4><p>模块化：模块可以理解为把代码拆分成独立的代码块或文件，每个块能实现特定的功能；然后各自封装，隔离和组织这些模块。</p>
+<p>在ES6之前的模块加载器：CommonJS、ADM、CMD、UDM</p>
+<ul>
+<li>CommonJS：同步加载，适用于服务器，node、webpack使用</li>
+<li>ADM（Asynchronous Module Definition），异步模块定义，以浏览器为目标执行环境，实现核心为用函数包装模块定义，异步加载，浏览器使用，实现的requireJS想兼容服务器和浏览器，预加载</li>
+<li>CMD（Cmomon Module Definition），通用模块定义，异步加载，专注于浏览器，实现的是seaJS，使用时加载</li>
+<li>UMD（Universal Module Definition），通用模块定义，AMD和commonJS的结合，可以服务端使用也可以浏览器使用</li>
+</ul>
+<hr>
+<p>​        JavaScript文件、css、图片、JSON等等都可以被当作模块使用</p>
+<p>​		 webpack可以让我们进行模块化开发，并且会帮助处理模块间的依赖关系，将其进行整合打包</p>
+<h4 id="round-pushpin-打包"><a href="#round-pushpin-打包" class="headerlink" title=":round_pushpin:打包"></a>:round_pushpin:打包</h4><p>​		webpack中的各种资源模块可以打包成一个或多个包，在打包过程中会对资源进行处理，比如压缩图片，将SCSS转成css，将ES6语法转成ES5语法，将TypeScript转成JavaScript等操作</p>
+<h5 id="webpack与grunt-gulp的对比"><a href="#webpack与grunt-gulp的对比" class="headerlink" title="webpack与grunt&#x2F;gulp的对比"></a>webpack与grunt&#x2F;gulp的对比</h5><ul>
+<li>grunt&#x2F;gulp 也被称为前端自动化任务管理工具，其核心是Task，我们可以配置一系列的 task，并且定义 task 要处理的事务（例如 ES6、ts 转化，图片压缩，scss 转成 css）之后让 grunt&#x2F;gulp 来依次执行这些 task，而且让整个流程自动化</li>
+<li>webpack 更加强调模块化开发管理，而文件压缩合并、预处理等功能，是他附带的功能</li>
+</ul>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Gyanga</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/11/webpack/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;11&#x2F;webpack&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;11&#x2F;webpack&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
         
         
-          
-            <h3 class="archive-year">2024 年</h3>
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/H5%E6%94%AF%E4%BB%98/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/H5%E6%94%AF%E4%BB%98/">H5支付</a>
-          </div>
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/" rel="tag">webpack</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2024/01/11/H5%E6%94%AF%E4%BB%98/"><i class="iconfont iconleft"></i>H5支付</a>
+    <a href="/2024/01/11/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">uniapp开发规范<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
         
           
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/webpack/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/webpack/">webpack</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">uniapp开发规范</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/%E4%BA%86%E8%A7%A3Docker/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/%E4%BA%86%E8%A7%A3Docker/">了解Docker</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/%E4%BD%BF%E7%94%A8VMware%E5%AE%89%E8%A3%85Centos7%E7%8E%AF%E5%A2%83/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/%E4%BD%BF%E7%94%A8VMware%E5%AE%89%E8%A3%85Centos7%E7%8E%AF%E5%A2%83/">使用VMware安装Centos7环境</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/%E5%88%9D%E8%AF%86Electron/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/%E5%88%9D%E8%AF%86Electron/">初识Electron</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2024/01/11/About%20me/">January 11</a>
-            <a class="archive-title" href="/2024/01/11/About%20me/">About me</a>
-          </div>
-        
-          
-            <h3 class="archive-year">2021 年</h3>
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/">April 24</a>
-            <a class="archive-title" href="/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/">UML---类图</a>
-          </div>
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#triangular-flag-on-post-webpack"><span class="toc-text">:triangular_flag_on_post:webpack</span></a></li></ol>
+  </aside>
+
         
       </div>
     </div>
-  </section>
+  </div>
 </main>
   
 

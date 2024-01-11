@@ -1,0 +1,618 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>H5支付 - Gyang&#39;s personal space</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content=":balloon:概述​        H5支付时商户...">
+  <meta name="author" content="Gyanga">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/favicon-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/favicon-logo.png" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: 'search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">H5支付</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 图册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/TKDeX1qgYPu4ZaIpNKjoaPKp3o.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">H5支付</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 11, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2962</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+          <p>商户在微信客户端外的移动端网页展示商品或服务,用户在前述页面确认使用微信支付时,商户发起本服务呼起微信客户端进行支付</p>
+        
+        <h2 id="balloon-概述"><a href="#balloon-概述" class="headerlink" title=":balloon:概述"></a>:balloon:概述</h2><p>​        H5支付时商户在微信客户端外的移动端页面展示商品或服务，用户在前述页面确定使用微信支付时，商户发起本服务呼起微信客户端进行支付</p>
+<p>​        主要用于触屏版的手机浏览器请求微信支付的场景，可以方便的从外部浏览器唤起微信支付</p>
+<h2 id="balloon-业务流程"><a href="#balloon-业务流程" class="headerlink" title=":balloon:业务流程"></a>:balloon:业务流程</h2><h3 id="zap-商户"><a href="#zap-商户" class="headerlink" title=":zap:商户"></a>:zap:商户</h3><p>H5商城网站，经过ICP备案。</p>
+<p>通过H5支付可以实现在非微信浏览器中使用微信支付的场景</p>
+<h3 id="zap-用户"><a href="#zap-用户" class="headerlink" title=":zap:用户"></a>:zap:用户</h3><ol>
+<li>用户从非微信浏览器的站点导航进入商户H5网页，选择需购买商品选择微信支付发起购买流程</li>
+<li>进入微信客户端确认交易，输入密码</li>
+<li>支付成功，用户收到支付凭证同时商户后台收到支付成功的通知</li>
+</ol>
+<h2 id="balloon-接口流程"><a href="#balloon-接口流程" class="headerlink" title=":balloon:接口流程"></a>:balloon:接口流程</h2><ol>
+<li>用户下单使用微信进行支付</li>
+<li>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</li>
+</ol>
+<blockquote>
+<p>URL地址：<a target="_blank" rel="noopener" href="https://api.mch.weixin.qq.com/pay/unifiedorder">https://api.mch.weixin.qq.com/pay/unifiedorder</a></p>
+</blockquote>
+<p><strong>请求参数</strong>(必填参数)</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>公众号ID</td>
+<td>appid</td>
+<td>String(32)</td>
+<td>微信分配的公众号ID</td>
+</tr>
+<tr>
+<td>商户号</td>
+<td>mch_id</td>
+<td>String(32)</td>
+<td>微信支付分配的商户号</td>
+</tr>
+<tr>
+<td>随机字符串</td>
+<td>nonce_str</td>
+<td>String(32)</td>
+<td>随机字符串，可通过<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=4_3">随机数生成算法</a>生成</td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>String(32)</td>
+<td>签名，可通过<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=4_3">签名生成算法</a>生成</td>
+</tr>
+<tr>
+<td>商品描述</td>
+<td>body</td>
+<td>String(128)</td>
+<td>商品简单描述，需按<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=4_2">规范</a>传递</td>
+</tr>
+<tr>
+<td>商户订单号</td>
+<td>out_trade_no</td>
+<td>String(32)</td>
+<td>商户系统内部的<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=4_2">订单号</a></td>
+</tr>
+<tr>
+<td>总金额</td>
+<td>total_fee</td>
+<td>Int</td>
+<td>订单总金额，单位为分</td>
+</tr>
+<tr>
+<td>终端IP</td>
+<td>spbill_create_ip</td>
+<td>String(64)</td>
+<td>用户端IP，<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_5">获取方式</a></td>
+</tr>
+<tr>
+<td>通知地址</td>
+<td>notify_url</td>
+<td>String(256)</td>
+<td>接收微信支付异步通知回调地址（可直接访问，不能携带参数）</td>
+</tr>
+<tr>
+<td>交易类型</td>
+<td>trade_type</td>
+<td>Srting(16)</td>
+<td>H5支付的交易类型为<code>MWEB</code></td>
+</tr>
+<tr>
+<td>场景信息</td>
+<td>scene_info</td>
+<td>Striing(256)</td>
+<td>用于上报支付的<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">场景信息</a>（IOS移动应用、安卓移动应用、WAP网站应用、门店信息）</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>统一接口返回支付相关参数给商户后台（如支付跳转url）</li>
+</ol>
+<p><strong>返回结果</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回状态码</td>
+<td>return_code</td>
+<td>String(16)</td>
+<td>SUCCESS</td>
+<td>通信标识（SUCCESS&#x2F;FAIL）</td>
+</tr>
+<tr>
+<td>返回信息</td>
+<td>return_msg</td>
+<td>String(128)</td>
+<td>OK</td>
+<td>当返回状态码为FAIL时返回信息为错误原因</td>
+</tr>
+</tbody></table>
+<p>return_code为SUCCESS时返回：</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>公共账号ID</td>
+<td>appid</td>
+<td>String(32)</td>
+<td>调用接口提交的公众账号ID</td>
+</tr>
+<tr>
+<td>商户号</td>
+<td>mch_id</td>
+<td>String(32)</td>
+<td>调用接口提交的商户号</td>
+</tr>
+<tr>
+<td>随机字符串</td>
+<td>nonce_str</td>
+<td>String(32)</td>
+<td>微信返回的随机字符串</td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>String(32)</td>
+<td>微信返回的签名</td>
+</tr>
+<tr>
+<td>业务结果</td>
+<td>result_code</td>
+<td>String(16)</td>
+<td>SUCCESS&#x2F;FAIL</td>
+</tr>
+</tbody></table>
+<p>return_code 和result_code都为SUCCESS时返回：</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th align="center">变量名</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>交易类型</td>
+<td align="center">trade_type</td>
+<td>String(16)</td>
+<td>调用接口提交的交易类型(MWEB)</td>
+</tr>
+<tr>
+<td>预支付交易会话标识</td>
+<td align="center">prepay_id</td>
+<td>String(64)</td>
+<td>微信生成的预支付回话标识，用于后续接口调用中使用，有效期2小时,针对H5支付此参数无特殊用途</td>
+</tr>
+<tr>
+<td>支付跳转链接</td>
+<td align="center">mweb_url</td>
+<td>String(64)</td>
+<td>mweb_url为拉起微信支付收银台的中间页面，可通过访问该url来拉起微信客户端，完成支付,mweb_url的有效期为5分钟。</td>
+</tr>
+</tbody></table>
+<p><strong><a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">错误码</a></strong></p>
+<ol start="4">
+<li>中间页进行H5权限的校验，安全性检查（<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_4">常见问题</a>）</li>
+<li>如支付成功，商户后台会接收到微信侧的异步通知</li>
+<li>用户在完成支付或取消支付后返回商户页面</li>
+<li>商户在展示页面引导用户发起支付结果查询</li>
+<li>商户后台判断是否接收到微信侧的支付结果，没有可调用<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</li>
+<li>展示最终的订单支付结</li>
+</ol>
+<h2 id="balloon-接口规则"><a href="#balloon-接口规则" class="headerlink" title=":balloon:接口规则"></a>:balloon:接口规则</h2><h3 id="zap-协议规则"><a href="#zap-协议规则" class="headerlink" title=":zap:协议规则"></a>:zap:协议规则</h3><ul>
+<li>传输方式：采用HTTPS传输，保证交易安全性</li>
+<li>提交方式：采用POST方法提交</li>
+<li>数据格式：提交和返回数据都为XML格式，根节点名为xml</li>
+<li>字符编码：统一采用UTF-8字符编码</li>
+<li>签名算法：MD5</li>
+<li>签名要求：请求和接收均需校验签名（签名算法）</li>
+<li>证书要求：调用申请退款、撤销订单接口需要商户证书</li>
+<li>判断逻辑：先判断协议字段返回，在判断业务返回，最后判断交易状态</li>
+</ul>
+<h3 id="zap-安全规范"><a href="#zap-安全规范" class="headerlink" title=":zap:安全规范"></a>:zap:安全规范</h3><ol>
+<li>使用签名算法</li>
+<li>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</li>
+<li>API证书（获取和使用）</li>
+</ol>
+<ul>
+<li><p>证书文件应放在有访问权限控制的目录</p>
+</li>
+<li><p>证书文件名应该是复杂且不容易猜测的</p>
+</li>
+<li><p>服务器应该做好病毒和木马防护工作</p>
+<ol start="4">
+<li>客户回调API安全（通过采用HTTPS协议）<br>  5.  获取openid(标识微信用户)</li>
+</ol>
+</li>
+</ul>
+<h2 id="balloon-实现思路"><a href="#balloon-实现思路" class="headerlink" title=":balloon:实现思路"></a>:balloon:实现思路</h2><ol>
+<li>支付前的一顿操作……..</li>
+<li>点某个按钮触发跳转到带有微信支付按钮的页面</li>
+<li>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</li>
+<li>微信支付系统根据请求数据生成预支付交易会话标识（prepay_id）并返回过来</li>
+<li>:star:构造微信支付所需参数（请求参数见上）后调用统一下单接口向微信支付发起下单请求</li>
+</ol>
+<ul>
+<li><p>trade_type&#x3D;MWEB</p>
+</li>
+<li><p>生成签名：将发送的参数按参数名ASCII码从大到小排序，使用键值对的格式拼接成字符串，然后在字符串后拼接key得到新的字符串并进行MD5运算</p>
+</li>
+<li><p>生成随机字符串：调用随机数函数生成，将得到的值转换为字符串。</p>
+</li>
+<li><p>获取用户端ip：获取’REMOTE_ADDR ‘（无代理情况）</p>
+</li>
+<li><p>场景信息(WAP网站应用)：</p>
+<pre><code> &#123;
+   &quot;h5_info&quot;: //h5支付固定传&quot;h5_info&quot;
+      &#123; &quot;type&quot;: &quot;&quot;, //场景类型
+        &quot;wap_url&quot;: &quot;&quot;,//WAP网站URL地址
+        &quot;wap_name&quot;: &quot;&quot; //WAP 网站名
+      &#125;
+ &#125;
+</code></pre>
+</li>
+<li><p>通知地址：接收微信支付异步通知回调地址notify_url</p>
+</li>
+</ul>
+<ol start="6">
+<li><p>统一下单接口返回支付相关参数（支付跳转url：meb_url）给商户后台</p>
+</li>
+<li><p>通过mweb_url调起微信支付中间页</p>
+</li>
+<li><p>中间页进行H5权限的校验，安全性检查</p>
+</li>
+<li><p>微信支付系统核验请求后提示输入支付密码</p>
+</li>
+<li><p>微信支付系统验证后返回支付结果后跳转回h5页面并异步通知网站支付结果，网站及时更新订单信息并在页面显示，更新订单日志</p>
+</li>
+<li><p>支付成功，用户收到支付凭证，商店后台收到支付成功通知</p>
+</li>
+</ol>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Gyanga</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/11/H5%E6%94%AF%E4%BB%98/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;11&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;11&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/" rel="tag">H5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/" rel="tag">微信支付</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2024/01/11/webpack/">webpack<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#balloon-%E6%A6%82%E8%BF%B0"><span class="toc-text">:balloon:概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#balloon-%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B"><span class="toc-text">:balloon:业务流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#zap-%E5%95%86%E6%88%B7"><span class="toc-text">:zap:商户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zap-%E7%94%A8%E6%88%B7"><span class="toc-text">:zap:用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#balloon-%E6%8E%A5%E5%8F%A3%E6%B5%81%E7%A8%8B"><span class="toc-text">:balloon:接口流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#balloon-%E6%8E%A5%E5%8F%A3%E8%A7%84%E5%88%99"><span class="toc-text">:balloon:接口规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#zap-%E5%8D%8F%E8%AE%AE%E8%A7%84%E5%88%99"><span class="toc-text">:zap:协议规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zap-%E5%AE%89%E5%85%A8%E8%A7%84%E8%8C%83"><span class="toc-text">:zap:安全规范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#balloon-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="toc-text">:balloon:实现思路</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
