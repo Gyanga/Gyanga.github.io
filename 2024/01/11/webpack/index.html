@@ -260,20 +260,18 @@
     <div class="btn" id="comments-btn">查看评论</div>
   
   
-<script src="/lib/artalk/Artalk.js"></script>
-<link href="/lib/artalk/Artalk.css" rel="stylesheet">
-
+<link href="https://unpkg.com/artalk@2.4.4/dist/Artalk.css" rel="stylesheet">
+<script src="https://unpkg.com/artalk@2.4.4/dist/Artalk.js"></script>
 <div id="Comments"></div>
-
 <script>
    window.onload = function () {
     var loadArtalk =  function () {
-      var artalk = Artalk.init({
+      new Artalk({
       el: '#Comments',
       pageKey: 'https://gyanga.github.io/2024/01/11/webpack/',
       pageTitle: 'webpack',
       server: 'https://www.sky123.top/artalk',
-      site: 'Gyang&#39;s personal space'
+      site: 'Gyanga'
     }) }
     if ( true ) {
       $("#comments-btn").on("click", function () {

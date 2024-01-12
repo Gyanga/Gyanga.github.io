@@ -192,7 +192,7 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://framerusercontent.com/images/7P9Iao3nkkraOdyyiPdAeLBUA.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/hMXHfj35FGvHNexFxn2Oq1bDK4.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">关于</h1>
     <div class="head-info">
@@ -219,20 +219,18 @@
     <div class="btn" id="comments-btn">查看评论</div>
   
   
-<script src="/lib/artalk/Artalk.js"></script>
-<link href="/lib/artalk/Artalk.css" rel="stylesheet">
-
+<link href="https://unpkg.com/artalk@2.4.4/dist/Artalk.css" rel="stylesheet">
+<script src="https://unpkg.com/artalk@2.4.4/dist/Artalk.js"></script>
 <div id="Comments"></div>
-
 <script>
    window.onload = function () {
     var loadArtalk =  function () {
-      var artalk = Artalk.init({
+      new Artalk({
       el: '#Comments',
       pageKey: 'https://gyanga.github.io/about/index.html',
       pageTitle: '关于',
       server: 'https://www.sky123.top/artalk',
-      site: 'Gyang&#39;s personal space'
+      site: 'Gyanga'
     }) }
     if ( true ) {
       $("#comments-btn").on("click", function () {
