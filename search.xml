@@ -812,10 +812,10 @@
 <li><p>仓库：<a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
 </li>
 </ul>
-<h4 id="Docker与虚拟机的比较"><a href="#Docker与虚拟机的比较" class="headerlink" title="Docker与虚拟机的比较"></a>Docker与虚拟机的比较</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115546688.png" style="zoom:33%;" />
+<h4 id="Docker与虚拟机的比较"><a href="#Docker与虚拟机的比较" class="headerlink" title="Docker与虚拟机的比较"></a>Docker与虚拟机的比较</h4><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115546688.png" style="zoom:50%;" />
 
 <p>PS：虚拟机技术</p>
-<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115733382.png" style="zoom:33%;" />
+<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20210422115733382.png" style="zoom:50%;" />
 
 <p>PS：Docker容器化技术</p>
 <ul>
@@ -989,7 +989,7 @@
 <p>再次开启虚拟机，此时虚拟机存在光驱，光驱里有一个光盘（光盘就是系统）</p>
 <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20211106221428316.png" alt="" style="zoom:67%;" />
 
-<img src="C:\Users\郭洋\AppData\Roaming\Typora\typora-user-images\image-20211106221604121.png" alt="" style="zoom:67%;" />
+<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20211106221604121.png" alt="" style="zoom:67%;" />
 
 <p>PS：选择英文可以避免很多bug（中文可能出现乱码）</p>
 <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20211106221842834.png" alt="" style="zoom:67%;" />
