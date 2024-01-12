@@ -238,16 +238,16 @@
   <entry>
     <title>H5支付</title>
     <url>/2024/01/11/H5%E6%94%AF%E4%BB%98/</url>
-    <content><![CDATA[<h2 id="balloon-概述"><a href="#balloon-概述" class="headerlink" title=":balloon:概述"></a>:balloon:概述</h2><p>​        H5支付时商户在微信客户端外的移动端页面展示商品或服务，用户在前述页面确定使用微信支付时，商户发起本服务呼起微信客户端进行支付</p>
+    <content><![CDATA[<h2 id="🎈概述"><a href="#🎈概述" class="headerlink" title="🎈概述"></a>🎈概述</h2><p>​        H5支付时商户在微信客户端外的移动端页面展示商品或服务，用户在前述页面确定使用微信支付时，商户发起本服务呼起微信客户端进行支付</p>
 <p>​        主要用于触屏版的手机浏览器请求微信支付的场景，可以方便的从外部浏览器唤起微信支付</p>
-<h2 id="balloon-业务流程"><a href="#balloon-业务流程" class="headerlink" title=":balloon:业务流程"></a>:balloon:业务流程</h2><h3 id="zap-商户"><a href="#zap-商户" class="headerlink" title=":zap:商户"></a>:zap:商户</h3><p>H5商城网站，经过ICP备案。</p>
+<h2 id="🎈业务流程"><a href="#🎈业务流程" class="headerlink" title="🎈业务流程"></a>🎈业务流程</h2><h3 id="⚡商户"><a href="#⚡商户" class="headerlink" title="⚡商户"></a>⚡商户</h3><p>H5商城网站，经过ICP备案。</p>
 <p>通过H5支付可以实现在非微信浏览器中使用微信支付的场景</p>
-<h3 id="zap-用户"><a href="#zap-用户" class="headerlink" title=":zap:用户"></a>:zap:用户</h3><ol>
+<h3 id="⚡用户"><a href="#⚡用户" class="headerlink" title="⚡用户"></a>⚡用户</h3><ol>
 <li>用户从非微信浏览器的站点导航进入商户H5网页，选择需购买商品选择微信支付发起购买流程</li>
 <li>进入微信客户端确认交易，输入密码</li>
 <li>支付成功，用户收到支付凭证同时商户后台收到支付成功的通知</li>
 </ol>
-<h2 id="balloon-接口流程"><a href="#balloon-接口流程" class="headerlink" title=":balloon:接口流程"></a>:balloon:接口流程</h2><ol>
+<h2 id="🎈接口流程"><a href="#🎈接口流程" class="headerlink" title="🎈接口流程"></a>🎈接口流程</h2><ol>
 <li>用户下单使用微信进行支付</li>
 <li>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</li>
 </ol>
@@ -439,7 +439,7 @@
 <li>商户后台判断是否接收到微信侧的支付结果，没有可调用<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</li>
 <li>展示最终的订单支付结</li>
 </ol>
-<h2 id="balloon-接口规则"><a href="#balloon-接口规则" class="headerlink" title=":balloon:接口规则"></a>:balloon:接口规则</h2><h3 id="zap-协议规则"><a href="#zap-协议规则" class="headerlink" title=":zap:协议规则"></a>:zap:协议规则</h3><ul>
+<h2 id="🎈接口规则"><a href="#🎈接口规则" class="headerlink" title="🎈接口规则"></a>🎈接口规则</h2><h3 id="⚡协议规则"><a href="#⚡协议规则" class="headerlink" title="⚡协议规则"></a>⚡协议规则</h3><ul>
 <li>传输方式：采用HTTPS传输，保证交易安全性</li>
 <li>提交方式：采用POST方法提交</li>
 <li>数据格式：提交和返回数据都为XML格式，根节点名为xml</li>
@@ -449,7 +449,7 @@
 <li>证书要求：调用申请退款、撤销订单接口需要商户证书</li>
 <li>判断逻辑：先判断协议字段返回，在判断业务返回，最后判断交易状态</li>
 </ul>
-<h3 id="zap-安全规范"><a href="#zap-安全规范" class="headerlink" title=":zap:安全规范"></a>:zap:安全规范</h3><ol>
+<h3 id="⚡安全规范"><a href="#⚡安全规范" class="headerlink" title="⚡安全规范"></a>⚡安全规范</h3><ol>
 <li>使用签名算法</li>
 <li>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</li>
 <li>API证书（获取和使用）</li>
@@ -465,7 +465,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="balloon-实现思路"><a href="#balloon-实现思路" class="headerlink" title=":balloon:实现思路"></a>:balloon:实现思路</h2><ol>
+<h2 id="🎈实现思路"><a href="#🎈实现思路" class="headerlink" title="🎈实现思路"></a>🎈实现思路</h2><ol>
 <li>支付前的一顿操作……..</li>
 <li>点某个按钮触发跳转到带有微信支付按钮的页面</li>
 <li>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</li>
