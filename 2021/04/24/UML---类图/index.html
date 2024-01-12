@@ -192,7 +192,7 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://framerusercontent.com/images/hMXHfj35FGvHNexFxn2Oq1bDK4.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/jKMvSQd2cWwdCyfvrQGjPmySNW4.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">UML---类图</h1>
     <div class="head-info">
@@ -280,30 +280,29 @@
     <div class="btn" id="comments-btn">查看评论</div>
   
   
-<div id="valine"></div>
-<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<link href="/lib/artalk/Artalk.css" rel="stylesheet">
+<script src="/lib/artalk/Artalk.js"></script>
+
+<div id="Comments"></div>
+
 <script>
-  window.onload = function () {
-    var loadValine = function () {
-      new Valine({
-        el: '#valine',
-        app_id: "8wRJZOb8nsl6KXOg23LDAiGl-gzGzoHsz",
-        app_key: "1mtc7695gyWmxatF9oT4hDdW",
-        placeholder: "雁过留痕",
-        avatar: "mp",
-        pageSize: "10",
-        lang: "zh-CN",
-      });
-    }
+   window.onload = function () {
+    var loadArtalk =  function () { Artalk.init({
+      el: '#Comments',
+      pageKey: 'https://gyanga.github.io/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/',
+      pageTitle: 'UML---类图',
+      server: 'https://www.sky123.top/artalk',
+      site: 'Gyang&#39;s personal space'
+    }) }
     if ( true ) {
       $("#comments-btn").on("click", function () {
         $(this).hide();
-        loadValine();
+        loadArtalk();
       });
     } else {
-      loadValine();
+      loadArtalk();
     }
-  };
+  }
 </script>
 
 </section>
