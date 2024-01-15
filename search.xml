@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>About me</title>
-    <url>/2024/01/11/About%20me/</url>
+    <url>/2022/11/03/About%20me/</url>
     <content><![CDATA[<h2 id="😀对前端的认识"><a href="#😀对前端的认识" class="headerlink" title="😀对前端的认识"></a>😀对前端的认识</h2><ul>
 <li><p>前端是用户接触到的部分，融合了设计、编码以及一些整体的理念，还涉及接口请求、数据处理和交互等方面，具有一定的挑战性</p>
 </li>
@@ -237,7 +237,7 @@
   </entry>
   <entry>
     <title>H5支付</title>
-    <url>/2024/01/11/H5%E6%94%AF%E4%BB%98/</url>
+    <url>/2021/08/02/H5%E6%94%AF%E4%BB%98/</url>
     <content><![CDATA[<h2 id="🎈概述"><a href="#🎈概述" class="headerlink" title="🎈概述"></a>🎈概述</h2><p>​        H5支付时商户在微信客户端外的移动端页面展示商品或服务，用户在前述页面确定使用微信支付时，商户发起本服务呼起微信客户端进行支付</p>
 <p>​        主要用于触屏版的手机浏览器请求微信支付的场景，可以方便的从外部浏览器唤起微信支付</p>
 <h2 id="🎈业务流程"><a href="#🎈业务流程" class="headerlink" title="🎈业务流程"></a>🎈业务流程</h2><h3 id="⚡商户"><a href="#⚡商户" class="headerlink" title="⚡商户"></a>⚡商户</h3><p>H5商城网站，经过ICP备案。</p>
@@ -248,12 +248,10 @@
 <li>支付成功，用户收到支付凭证同时商户后台收到支付成功的通知</li>
 </ol>
 <h2 id="🎈接口流程"><a href="#🎈接口流程" class="headerlink" title="🎈接口流程"></a>🎈接口流程</h2><ol>
-<li>用户下单使用微信进行支付</li>
-<li>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</li>
-</ol>
-<blockquote>
+<li><p>用户下单使用微信进行支付</p>
+</li>
+<li><p>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</p>
 <p>URL地址：<a href="https://api.mch.weixin.qq.com/pay/unifiedorder">https://api.mch.weixin.qq.com/pay/unifiedorder</a></p>
-</blockquote>
 <p><strong>请求参数</strong>(必填参数)</p>
 <table>
 <thead>
@@ -331,9 +329,8 @@
 <td>用于上报支付的<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">场景信息</a>（IOS移动应用、安卓移动应用、WAP网站应用、门店信息）</td>
 </tr>
 </tbody></table>
-<ol start="3">
-<li>统一接口返回支付相关参数给商户后台（如支付跳转url）</li>
-</ol>
+</li>
+<li><p>统一接口返回支付相关参数给商户后台（如支付跳转url）</p>
 <p><strong>返回结果</strong></p>
 <table>
 <thead>
@@ -431,13 +428,19 @@
 </tr>
 </tbody></table>
 <p><strong><a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">错误码</a></strong></p>
-<ol start="4">
-<li>中间页进行H5权限的校验，安全性检查（<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_4">常见问题</a>）</li>
-<li>如支付成功，商户后台会接收到微信侧的异步通知</li>
-<li>用户在完成支付或取消支付后返回商户页面</li>
-<li>商户在展示页面引导用户发起支付结果查询</li>
-<li>商户后台判断是否接收到微信侧的支付结果，没有可调用<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</li>
-<li>展示最终的订单支付结</li>
+</li>
+<li><p>中间页进行H5权限的校验，安全性检查（<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_4">常见问题</a>）</p>
+</li>
+<li><p>如支付成功，商户后台会接收到微信侧的异步通知</p>
+</li>
+<li><p>用户在完成支付或取消支付后返回商户页面</p>
+</li>
+<li><p>商户在展示页面引导用户发起支付结果查询</p>
+</li>
+<li><p>商户后台判断是否接收到微信侧的支付结果，没有可调用<a href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</p>
+</li>
+<li><p>展示最终的订单支付结</p>
+</li>
 </ol>
 <h2 id="🎈接口规则"><a href="#🎈接口规则" class="headerlink" title="🎈接口规则"></a>🎈接口规则</h2><h3 id="⚡协议规则"><a href="#⚡协议规则" class="headerlink" title="⚡协议规则"></a>⚡协议规则</h3><ul>
 <li>传输方式：采用HTTPS传输，保证交易安全性</li>
@@ -450,28 +453,32 @@
 <li>判断逻辑：先判断协议字段返回，在判断业务返回，最后判断交易状态</li>
 </ul>
 <h3 id="⚡安全规范"><a href="#⚡安全规范" class="headerlink" title="⚡安全规范"></a>⚡安全规范</h3><ol>
-<li>使用签名算法</li>
-<li>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</li>
-<li>API证书（获取和使用）</li>
-</ol>
+<li><p>使用签名算法</p>
+</li>
+<li><p>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</p>
+</li>
+<li><p>API证书（获取和使用）</p>
 <ul>
-<li><p>证书文件应放在有访问权限控制的目录</p>
-</li>
-<li><p>证书文件名应该是复杂且不容易猜测的</p>
-</li>
-<li><p>服务器应该做好病毒和木马防护工作</p>
-<ol start="4">
-<li>客户回调API安全（通过采用HTTPS协议）<br>  5.  获取openid(标识微信用户)</li>
-</ol>
-</li>
+<li>证书文件应放在有访问权限控制的目录</li>
+<li>证书文件名应该是复杂且不容易猜测的</li>
+<li>服务器应该做好病毒和木马防护工作</li>
 </ul>
-<h2 id="🎈实现思路"><a href="#🎈实现思路" class="headerlink" title="🎈实现思路"></a>🎈实现思路</h2><ol>
-<li>支付前的一顿操作……..</li>
-<li>点某个按钮触发跳转到带有微信支付按钮的页面</li>
-<li>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</li>
-<li>微信支付系统根据请求数据生成预支付交易会话标识（prepay_id）并返回过来</li>
-<li>:star:构造微信支付所需参数（请求参数见上）后调用统一下单接口向微信支付发起下单请求</li>
+</li>
+<li><p>客户回调API安全（通过采用HTTPS协议）</p>
+</li>
+<li><p>获取openid(标识微信用户)</p>
+</li>
 </ol>
+<h2 id="🎈实现思路"><a href="#🎈实现思路" class="headerlink" title="🎈实现思路"></a>🎈实现思路</h2><ol>
+<li><p>支付前的一顿操作……..</p>
+</li>
+<li><p>点某个按钮触发跳转到带有微信支付按钮的页面</p>
+</li>
+<li><p>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</p>
+</li>
+<li><p>微信支付系统根据请求数据生成预支付交易会话标识（prepay_id）并返回过来</p>
+</li>
+<li><p>:star:构造微信支付所需参数（请求参数见上）后调用统一下单接口向微信支付发起下单请求</p>
 <ul>
 <li><p>trade_type&#x3D;MWEB</p>
 </li>
@@ -482,19 +489,12 @@
 <li><p>获取用户端ip：获取’REMOTE_ADDR ‘（无代理情况）</p>
 </li>
 <li><p>场景信息(WAP网站应用)：</p>
-<pre><code> &#123;
-   &quot;h5_info&quot;: //h5支付固定传&quot;h5_info&quot;
-      &#123; &quot;type&quot;: &quot;&quot;, //场景类型
-        &quot;wap_url&quot;: &quot;&quot;,//WAP网站URL地址
-        &quot;wap_name&quot;: &quot;&quot; //WAP 网站名
-      &#125;
- &#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;h5_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-comment">//h5支付固定传&quot;h5_info&quot;</span><br>	 <span class="hljs-punctuation">&#123;</span> <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//场景类型</span><br>	   <span class="hljs-attr">&quot;wap_url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-comment">//WAP网站URL地址</span><br>       <span class="hljs-attr">&quot;wap_name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span> <span class="hljs-comment">//WAP 网站名</span><br>     <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>通知地址：接收微信支付异步通知回调地址notify_url</p>
 </li>
 </ul>
-<ol start="6">
+</li>
 <li><p>统一下单接口返回支付相关参数（支付跳转url：meb_url）给商户后台</p>
 </li>
 <li><p>通过mweb_url调起微信支付中间页</p>
@@ -518,17 +518,106 @@
       </tags>
   </entry>
   <entry>
+    <title>UML---类图</title>
+    <url>/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="📍类图简介"><a href="#📍类图简介" class="headerlink" title="📍类图简介"></a>📍类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
+<h2 id="📍类图结构"><a href="#📍类图结构" class="headerlink" title="📍类图结构"></a>📍类图结构</h2><img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424151025861.JPG"/>
+<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424152520880.JPG"/>
+指定接口的方式：再类名上方添加*< interface >*
+
+<h2 id="📍类图中的事物"><a href="#📍类图中的事物" class="headerlink" title="📍类图中的事物"></a>📍类图中的事物</h2><ul>
+<li>接口：一组操作的集合，只有操作的声明而没有实现</li>
+<li>抽象类：不能被实例化的类，一般至少包含一个抽象操作</li>
+<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类 <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424154652676.JPG"/></li>
+</ul>
+<h2 id="📍类图中的关系及代码映射（java）"><a href="#📍类图中的关系及代码映射（java）" class="headerlink" title="📍类图中的关系及代码映射（java）"></a>📍类图中的关系及代码映射（java）</h2><ul>
+<li><p>类的映射</p>
+ <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424163708231.png" />
+java:
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类</p>
+ <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/2021042416150334.png" />
+
+<ol>
+<li>双向关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>  <span class="hljs-keyword">private</span> Customer customer;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>单向关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>自关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>  <span class="hljs-keyword">private</span> Node subNode;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br>   eg:学校类与学生类</p>
+   <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424171005963.png" />
+
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在</p>
+<pre><code>eg: 窗口类和菜单类
+
+&lt;img src=&quot;https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424171101192.png&quot; /&gt;
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）</p>
+   <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/2021042417121472.png" />
+
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>   依赖关系有如下三种情况：</p>
+<ol>
+<li>A类是B类中的（某中方法的）局部变量；</li>
+<li>A类是B类方法当中的一个参数；</li>
+<li>A类向B类发送消息，从而影响B类发生变化</li>
+</ol>
+</li>
+<li><p>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</p>
+<pre><code>要求：
+</code></pre>
+<ol>
+<li>子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；</li>
+<li>子类中除了与父类一致的信息以外，还包括额外的信息；</li>
+<li>可以使用父类的实例的地方，也可以使用子类的实例；</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Tiger</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>实现关系（Realization）：接口和实现类的关系（实现类指向接口）</p>
+   <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424170019420.png" />
+
+   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="📍生动形象的实例"><a href="#📍生动形象的实例" class="headerlink" title="📍生动形象的实例"></a>📍生动形象的实例</h2> <img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424163039410.png" />
+
+<p>📌图源：<a href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a></p>
+<p>📌参考博客：<a href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+      </categories>
+      <tags>
+        <tag>UML</tag>
+        <tag>类图</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>webpack</title>
-    <url>/2024/01/11/webpack/</url>
-    <content><![CDATA[<h2 id="triangular-flag-on-post-webpack"><a href="#triangular-flag-on-post-webpack" class="headerlink" title=":triangular_flag_on_post:webpack"></a>:triangular_flag_on_post:webpack</h2><blockquote>
+    <url>/2022/07/10/webpack/</url>
+    <content><![CDATA[<h2 id="🚩webpack"><a href="#🚩webpack" class="headerlink" title="🚩webpack"></a>🚩webpack</h2><blockquote>
 <p>webpack是一个现代的JavaScript应用的静态模块打包工具</p>
 </blockquote>
 <ul>
 <li>模块</li>
-<li>打包</li>
+<li>打包<img src="https://miedamie.oss-cn-beijing.aliyuncs.com/img/image-20200916170737157.png" /></li>
 </ul>
-<p><img src="https://img.sky123.top/img/image-20200916170737157.png"></p>
-<h4 id="round-pushpin-前端模块化"><a href="#round-pushpin-前端模块化" class="headerlink" title=":round_pushpin:前端模块化"></a>:round_pushpin:前端模块化</h4><p>模块化：模块可以理解为把代码拆分成独立的代码块或文件，每个块能实现特定的功能；然后各自封装，隔离和组织这些模块。</p>
+<h4 id="📍前端模块化"><a href="#📍前端模块化" class="headerlink" title="📍前端模块化"></a>📍前端模块化</h4><p>模块化：模块可以理解为把代码拆分成独立的代码块或文件，每个块能实现特定的功能；然后各自封装，隔离和组织这些模块。</p>
 <p>在ES6之前的模块加载器：CommonJS、ADM、CMD、UDM</p>
 <ul>
 <li>CommonJS：同步加载，适用于服务器，node、webpack使用</li>
@@ -539,7 +628,7 @@
 <hr>
 <p>​        JavaScript文件、css、图片、JSON等等都可以被当作模块使用</p>
 <p>​		 webpack可以让我们进行模块化开发，并且会帮助处理模块间的依赖关系，将其进行整合打包</p>
-<h4 id="round-pushpin-打包"><a href="#round-pushpin-打包" class="headerlink" title=":round_pushpin:打包"></a>:round_pushpin:打包</h4><p>​		webpack中的各种资源模块可以打包成一个或多个包，在打包过程中会对资源进行处理，比如压缩图片，将SCSS转成css，将ES6语法转成ES5语法，将TypeScript转成JavaScript等操作</p>
+<h4 id="📍打包"><a href="#📍打包" class="headerlink" title="📍打包"></a>📍打包</h4><p>​		webpack中的各种资源模块可以打包成一个或多个包，在打包过程中会对资源进行处理，比如压缩图片，将SCSS转成css，将ES6语法转成ES5语法，将TypeScript转成JavaScript等操作</p>
 <h5 id="webpack与grunt-gulp的对比"><a href="#webpack与grunt-gulp的对比" class="headerlink" title="webpack与grunt&#x2F;gulp的对比"></a>webpack与grunt&#x2F;gulp的对比</h5><ul>
 <li>grunt&#x2F;gulp 也被称为前端自动化任务管理工具，其核心是Task，我们可以配置一系列的 task，并且定义 task 要处理的事务（例如 ES6、ts 转化，图片压缩，scss 转成 css）之后让 grunt&#x2F;gulp 来依次执行这些 task，而且让整个流程自动化</li>
 <li>webpack 更加强调模块化开发管理，而文件压缩合并、预处理等功能，是他附带的功能</li>
@@ -555,8 +644,8 @@
   </entry>
   <entry>
     <title>uniapp开发规范</title>
-    <url>/2024/01/11/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="oden-uniapp开发规范"><a href="#oden-uniapp开发规范" class="headerlink" title=":oden:uniapp开发规范"></a>:oden:<a href="https://uniapp.dcloud.io/frame?id=%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83">uniapp开发规范</a></h2><p>为了实现多端兼容，综合考虑编译速度、运行性能等因素，<code>uni-app</code> 约定了如下开发规范：</p>
+    <url>/2022/07/10/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="🍢uniapp开发规范"><a href="#🍢uniapp开发规范" class="headerlink" title="🍢uniapp开发规范"></a>🍢<a href="https://uniapp.dcloud.io/frame?id=%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83">uniapp开发规范</a></h2><p>为了实现多端兼容，综合考虑编译速度、运行性能等因素，<code>uni-app</code> 约定了如下开发规范：</p>
 <ul>
 <li>页面文件遵循 <a href="https://vue-loader.vuejs.org/zh/spec.html">Vue 单文件组件 (SFC) 规范</a></li>
 <li>组件标签靠近小程序规范，详见<a href="https://uniapp.dcloud.io/component/README">uni-app 组件规范</a></li>
@@ -564,20 +653,20 @@
 <li>数据绑定及事件处理同 <code>Vue.js</code> 规范，同时补充了App及页面的生命周期</li>
 <li>为兼容多端运行，建议使用flex布局进行开发</li>
 </ul>
-<h2 id="oden-结构化规范"><a href="#oden-结构化规范" class="headerlink" title=":oden:结构化规范"></a>:oden:结构化规范</h2><h4 id="rice-cracker-默认模板："><a href="#rice-cracker-默认模板：" class="headerlink" title=":rice_cracker:默认模板："></a>:rice_cracker:默认模板：</h4><p>┌─pages                  业务页面文件存放的目录<br>│  ├─index<br>│  │  └─index.vue       index页面<br>│  └─list<br>│     └─list.vue             list页面<br>├─static                   存放应用引用的本地静态资源（如图片、视频等）的目录，ps:静态资源只能存放于此<br>├─main.js                Vue初始化入口文件<br>├─App.vue              应用配置，用来配置App全局样式以及监听 <a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">应用生命周期</a><br>├─manifest.json     配置应用名称、appid、logo、版本等打包信息，<a href="https://uniapp.dcloud.io/collocation/manifest">详见</a></p>
+<h2 id="🍢结构化规范"><a href="#🍢结构化规范" class="headerlink" title="🍢结构化规范"></a>🍢结构化规范</h2><h4 id="🍙默认模板："><a href="#🍙默认模板：" class="headerlink" title="🍙默认模板："></a>🍙默认模板：</h4><p>┌─pages                  业务页面文件存放的目录<br>│  ├─index<br>│  │  └─index.vue       index页面<br>│  └─list<br>│     └─list.vue             list页面<br>├─static                   存放应用引用的本地静态资源（如图片、视频等）的目录，ps:静态资源只能存放于此<br>├─main.js                Vue初始化入口文件<br>├─App.vue              应用配置，用来配置App全局样式以及监听 <a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">应用生命周期</a><br>├─manifest.json     配置应用名称、appid、logo、版本等打包信息，<a href="https://uniapp.dcloud.io/collocation/manifest">详见</a></p>
 <p>├─pages.json          配置页面路由、导航条、选项卡等页面类信息，<a href="https://uniapp.dcloud.io/collocation/pages">详见</a><br>└─uni.scss               uni-app内置的常用样式变量</p>
-<h4 id="rice-cracker-添加目录文件夹及子文件规范："><a href="#rice-cracker-添加目录文件夹及子文件规范：" class="headerlink" title=":rice_cracker:添加目录文件夹及子文件规范："></a>:rice_cracker:添加目录文件夹及子文件规范：</h4><p>├─ api                     接口，统一管理</p>
+<h4 id="🍙添加目录文件夹及子文件规范："><a href="#🍙添加目录文件夹及子文件规范：" class="headerlink" title="🍙添加目录文件夹及子文件规范："></a>🍙添加目录文件夹及子文件规范：</h4><p>├─ api                     接口，统一管理</p>
 <p>├─components       符合vue组件规范的uni-app组件目录<br>│  └─comp-a.vue   可复用的a组件</p>
 <p>├─filters                  过滤器，全局工具</p>
 <p>├─mock                  模拟接口，临时存放</p>
 <p>├─store                   vuex, 统一管理</p>
 <p>├─utils                    存放自己封装的工具类函数</p>
-<h4 id="rice-cracker-文件命名："><a href="#rice-cracker-文件命名：" class="headerlink" title=":rice_cracker:文件命名："></a>:rice_cracker:文件命名：</h4><ul>
+<h4 id="🍙文件命名："><a href="#🍙文件命名：" class="headerlink" title="🍙文件命名："></a>🍙文件命名：</h4><ul>
 <li>尽量是名词,且使用驼峰命名法</li>
 <li>开头的单词就是所属模块名字（workbenchIndex、workbenchList、workbenchEdit）</li>
 <li>名字至少两个单词（good: workbenchIndex）（bad:workbench）</li>
 </ul>
-<h2 id="oden-组件规范"><a href="#oden-组件规范" class="headerlink" title=":oden:组件规范"></a>:oden:组件规范</h2><h4 id="rice-cracker-组件文件："><a href="#rice-cracker-组件文件：" class="headerlink" title=":rice_cracker:组件文件："></a>:rice_cracker:组件文件：</h4><p>只要有能够拼接文件的构建系统，就把每个组件单独分成文件。<br>当你需要编辑一个组件或查阅一个组件的用法时，可以更快速的找到它。</p>
+<h2 id="🍢组件规范"><a href="#🍢组件规范" class="headerlink" title="🍢组件规范"></a>🍢组件规范</h2><h4 id="🍙组件文件："><a href="#🍙组件文件：" class="headerlink" title="🍙组件文件："></a>🍙组件文件：</h4><p>只要有能够拼接文件的构建系统，就把每个组件单独分成文件。<br>当你需要编辑一个组件或查阅一个组件的用法时，可以更快速的找到它。</p>
 <ul>
 <li><p>vue组件</p>
 <ul>
@@ -591,105 +680,89 @@
 <p>PS：<code>easycom</code>打包后会自动剔除没有使用的组件，对组件库的使用尤为友好</p>
 </li>
 </ul>
-<h4 id="rice-cracker-组件命名规范："><a href="#rice-cracker-组件命名规范：" class="headerlink" title=":rice_cracker:组件命名规范："></a>:rice_cracker:组件命名规范：</h4><ul>
+<h4 id="🍙组件命名规范："><a href="#🍙组件命名规范：" class="headerlink" title="🍙组件命名规范："></a>🍙组件命名规范：</h4><ul>
 <li>有意义的: 不过于具体，也不过于抽象</li>
 <li>简短: 2 到 3 个单词</li>
 <li>具有可读性: 以便于沟通交流</li>
 </ul>
 <p>同时还需要注意：</p>
 <ul>
-<li>必须符合<strong>自定义元素规范</strong>: 使用<strong>连字符</strong><code>-</code>分隔单词，切勿使用保留字（可区分页面和组件）</li>
-<li>组件里面的name要和组件的名字保持一致</li>
-<li><code>app-</code>前缀作为命名空间: 如果非常通用的话可使用一个单词来命名，这样可以方便于其它项目里复用</li>
+<li><p>必须符合<strong>自定义元素规范</strong>: 使用<strong>连字符</strong><code>-</code>分隔单词，切勿使用保留字（可区分页面和组件）</p>
+</li>
+<li><p>组件里面的name要和组件的名字保持一致</p>
+</li>
+<li><p><code>app-</code>前缀作为命名空间: 如果非常通用的话可使用一个单词来命名，这样可以方便于其它项目里复用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">app-header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">app-header</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">user-list</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">user-list</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">btn-group</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">btn-group</span>&gt;</span> <span class="hljs-comment">&lt;!-- 虽然简短但是可读性差. 使用 `button-group` 替代 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ui-slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-slider</span>&gt;</span> <span class="hljs-comment">&lt;!-- ui 前缀太过于宽泛，在这里意义不明确 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slider</span>&gt;</span> <span class="hljs-comment">&lt;!-- 与自定义元素规范不兼容 --&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>&lt;app-header&gt;&lt;/app-header&gt;<br>&lt;user-list&gt;&lt;/user-list&gt;<br>&lt;range-slider&gt;&lt;/range-slider&gt;<br><br>&lt;!-- 避免 --&gt;<br>&lt;btn-group&gt;&lt;/btn-group&gt; &lt;!-- 虽然简短但是可读性差. 使用 `button-group` 替代 --&gt;<br>&lt;ui-slider&gt;&lt;/ui-slider&gt; &lt;!-- ui 前缀太过于宽泛，在这里意义不明确 --&gt;<br>&lt;slider&gt;&lt;/slider&gt; &lt;!-- 与自定义元素规范不兼容 --&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="🍙组件数据："><a href="#🍙组件数据：" class="headerlink" title="🍙组件数据："></a>🍙组件数据：</h4><p>组件的 data 必须是一个函数。<br>当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">&lt;!-- 推荐 --&gt;<br><span class="hljs-comment">// In a .vue file</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  data () &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;bar&#x27;</span><br>    &#125;<br>  &#125;<br>&#125;<br><span class="hljs-comment">// 在一个 Vue 的根实例上直接使用对象是可以的，</span><br><span class="hljs-comment">// 因为只存在一个这样的实例。</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;<br>  <span class="hljs-attr">data</span>: &#123;<br>    <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;bar&#x27;</span><br>  &#125;<br>&#125;)<br><br></code></pre></td></tr></table></figure>
 
-<h4 id="rice-cracker-组件数据："><a href="#rice-cracker-组件数据：" class="headerlink" title=":rice_cracker:组件数据："></a>:rice_cracker:组件数据：</h4><p>组件的 data 必须是一个函数。<br>当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>// In a .vue file<br>export default &#123;<br>  data () &#123;<br>    return &#123;<br>      foo: &#x27;bar&#x27;<br>    &#125;<br>  &#125;<br>&#125;<br>// 在一个 Vue 的根实例上直接使用对象是可以的，<br>// 因为只存在一个这样的实例。<br>new Vue(&#123;<br>  data: &#123;<br>    foo: &#x27;bar&#x27;<br>  &#125;<br>&#125;)<br><br></code></pre></td></tr></table></figure>
-
-<h4 id="rice-cracker-组件-props-原子化"><a href="#rice-cracker-组件-props-原子化" class="headerlink" title=":rice_cracker:组件 props 原子化"></a>:rice_cracker:组件 props 原子化</h4><p>为什么？</p>
+<h4 id="🍙组件-props-原子化"><a href="#🍙组件-props-原子化" class="headerlink" title="🍙组件 props 原子化"></a>🍙组件 props 原子化</h4><p>为什么？</p>
 <ul>
-<li>使得组件 API 清晰直观</li>
-<li>只使用原始类型和函数作为 props 使得组件的 API 更接近于 HTML(5) 原生元素</li>
-<li>其它开发者更好的理解每一个 prop 的含义、作用</li>
-<li>传递过于复杂的对象使得我们不能够清楚的知道哪些属性或方法被自定义组件使用，这使得代码难以重构和维护。</li>
+<li><p>使得组件 API 清晰直观</p>
+</li>
+<li><p>只使用原始类型和函数作为 props 使得组件的 API 更接近于 HTML(5) 原生元素</p>
+</li>
+<li><p>其它开发者更好的理解每一个 prop 的含义、作用</p>
+</li>
+<li><p>传递过于复杂的对象使得我们不能够清楚的知道哪些属性或方法被自定义组件使用，这使得代码难以重构和维护。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:values</span>=<span class="hljs-string">&quot;[10, 20]&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:min</span>=<span class="hljs-string">&quot;0&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:max</span>=<span class="hljs-string">&quot;100&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:step</span>=<span class="hljs-string">&quot;5&quot;</span></span><br><span class="hljs-tag">  @<span class="hljs-attr">on-slide</span>=<span class="hljs-string">&quot;updateInputs&quot;</span></span><br><span class="hljs-tag">  @<span class="hljs-attr">on-end</span>=<span class="hljs-string">&quot;updateResults&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span> <span class="hljs-attr">:config</span>=<span class="hljs-string">&quot;complexConfigObject&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>&lt;range-slider<br>  :values=&quot;[10, 20]&quot;<br>  :min=&quot;0&quot;<br>  :max=&quot;100&quot;<br>  :step=&quot;5&quot;<br>  @on-slide=&quot;updateInputs&quot;<br>  @on-end=&quot;updateResults&quot;&gt;<br>&lt;/range-slider&gt;<br><br>&lt;!-- 避免 --&gt;<br>&lt;range-slider :config=&quot;complexConfigObject&quot;&gt;&lt;/range-slider&gt;<br></code></pre></td></tr></table></figure>
-
-<h4 id="rice-cracker-将-this-赋值给-component-变量"><a href="#rice-cracker-将-this-赋值给-component-变量" class="headerlink" title=":rice_cracker:将 this 赋值给 component 变量"></a>:rice_cracker:将 this 赋值给 component 变量</h4><p>在 Vue.js 组件上下文中，this指向了组件实例。因此当你切换到了不同的上下文时，要确保 this 指向一个可用的 component 变量。</p>
+<h4 id="🍙将-this-赋值给-component-变量"><a href="#🍙将-this-赋值给-component-变量" class="headerlink" title="🍙将 this 赋值给 component 变量"></a>🍙将 this 赋值给 component 变量</h4><p>在 Vue.js 组件上下文中，this指向了组件实例。因此当你切换到了不同的上下文时，要确保 this 指向一个可用的 component 变量。</p>
 <p>换句话说，如果你正在使用 <code>ES6</code> 的话，就不要再编写 var self &#x3D; this; 这样的代码了，你可以安全地使用 Vue 组件。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>&lt;script type=&quot;text/javascript&quot;&gt;<br>export default &#123;<br>  methods: &#123;<br>    hello() &#123;<br>      return &#x27;hello&#x27;;<br>    &#125;,<br>    printHello() &#123;<br>      console.log(this.hello());<br>    &#125;,<br>  &#125;,<br>&#125;;<br>&lt;/script&gt;<br>&lt;!-- 避免 --&gt;<br>&lt;script type=&quot;text/javascript&quot;&gt;<br>export default &#123;<br>  methods: &#123;<br>    hello() &#123;<br>      return &#x27;hello&#x27;;<br>    &#125;,<br>    printHello() &#123;<br>      const self = this; // 没有必要<br>      console.log(self.hello());<br>    &#125;,<br>  &#125;,<br>&#125;;<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">    <span class="hljs-title function_">hello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">    <span class="hljs-title function_">printHello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">hello</span>());</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">  &#125;,</span><br><span class="language-javascript">&#125;;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">    <span class="hljs-title function_">hello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">    <span class="hljs-title function_">printHello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">const</span> self = <span class="hljs-variable language_">this</span>; <span class="hljs-comment">// 没有必要</span></span><br><span class="language-javascript">      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(self.<span class="hljs-title function_">hello</span>());</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">  &#125;,</span><br><span class="language-javascript">&#125;;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="oden-编码规范"><a href="#oden-编码规范" class="headerlink" title=":oden:编码规范"></a>:oden:编码规范</h2><h4 id="rice-cracker-变量命名要求"><a href="#rice-cracker-变量命名要求" class="headerlink" title=":rice_cracker:变量命名要求"></a>:rice_cracker:变量命名要求</h4><ul>
+<h2 id="🍢编码规范"><a href="#🍢编码规范" class="headerlink" title="🍢编码规范"></a>🍢编码规范</h2><h4 id="🍙变量命名要求"><a href="#🍙变量命名要求" class="headerlink" title="🍙变量命名要求"></a>🍙变量命名要求</h4><ul>
 <li>定义变量使用<code> let</code> ,定义常量使用<code> const</code></li>
 <li>命名方法 : 变量使用驼峰命名法</li>
 </ul>
-<h4 id="rice-cracker-常量命名要求"><a href="#rice-cracker-常量命名要求" class="headerlink" title=":rice_cracker:常量命名要求"></a>:rice_cracker:常量命名要求</h4><ul>
+<h4 id="🍙常量命名要求"><a href="#🍙常量命名要求" class="headerlink" title="🍙常量命名要求"></a>🍙常量命名要求</h4><ul>
 <li>命名方法: 全部大写</li>
 <li>命名规范: 使用大写字母和下划线来组合命名，下划线用以分割单词</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">const MAX_COUNT = 10<br>const URL = &#x27;https://www.baidu.com/&#x27;<br></code></pre></td></tr></table></figure>
 
-<h4 id="rice-cracker-解构赋值"><a href="#rice-cracker-解构赋值" class="headerlink" title=":rice_cracker:解构赋值"></a>:rice_cracker:解构赋值</h4><ul>
-<li>数组成员对变量赋值时，优先使用解构赋值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 数组解构赋值</span><br> <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> first = arr[<span class="hljs-number">0</span>]<br> <span class="hljs-keyword">const</span> second = arr[<span class="hljs-number">1</span>]<br><br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> [first, second] = arr<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>函数的参数如果是对象的成员，优先使用解构赋值</li>
-</ul>
+<h4 id="🍙解构赋值"><a href="#🍙解构赋值" class="headerlink" title="🍙解构赋值"></a>🍙解构赋值</h4><ul>
+<li><p>数组成员对变量赋值时，优先使用解构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 数组解构赋值</span><br> <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> first = arr[<span class="hljs-number">0</span>]<br> <span class="hljs-keyword">const</span> second = arr[<span class="hljs-number">1</span>]<br>  <br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> [first, second] = arr<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>函数的参数如果是对象的成员，优先使用解构赋值</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 对象解构赋值</span><br>  <span class="hljs-comment">// bad</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">user</span>) &#123;<br>    <span class="hljs-keyword">const</span> firstName = user.<span class="hljs-property">firstName</span><br>    <span class="hljs-keyword">const</span> lastName = user.<span class="hljs-property">lastName</span><br>  &#125;<br><br>  <span class="hljs-comment">// good</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">obj</span>) &#123;<br>    <span class="hljs-keyword">const</span> &#123; firstName, lastName &#125; = obj<br>  &#125;<br><br>  <span class="hljs-comment">// best</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">&#123; firstName, lastName &#125;</span>) &#123;&#125;<br></code></pre></td></tr></table></figure>
-
-<ul>
+</li>
 <li><p>拷贝数组</p>
 <p>使用扩展运算符（…）拷贝数组。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br>  <br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> itemsCopy = items<br>  <br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> itemsCopy = [...items]<br></code></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> itemsCopy = items<br><br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> itemsCopy = [...items]<br></code></pre></td></tr></table></figure>
-
-<ul>
 <li><p>箭头函数</p>
 <p>需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 this</p>
-</li>
-</ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// bad</span><br>  <span class="hljs-keyword">const</span> self = <span class="hljs-variable language_">this</span>;<br>  <span class="hljs-keyword">const</span> boundMethod = <span class="hljs-keyword">function</span>(<span class="hljs-params">...params</span>) &#123;<br>    <span class="hljs-keyword">return</span> method.<span class="hljs-title function_">apply</span>(self, params);<br>  &#125;<br><br>  <span class="hljs-comment">// acceptable</span><br>  <span class="hljs-keyword">const</span> boundMethod = method.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>);<br><br>  <span class="hljs-comment">// best</span><br>  <span class="hljs-keyword">const</span> <span class="hljs-title function_">boundMethod</span> = (<span class="hljs-params">...params</span>) =&gt; method.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>, params);<br></code></pre></td></tr></table></figure>
-
-<ul>
+</li>
 <li><p>模块</p>
 <ul>
-<li>如果模块只有一个输出值，就使用 export default，如果模块有多个输出值，就不使用 export default，export default 与普通的 export 不要同时使用</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// bad</span><br><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br>  <br><span class="hljs-comment">// good</span><br><span class="hljs-keyword">import</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>如果模块默认输出一个函数，函数名的首字母应该小写</li>
-</ul>
+<li><p>如果模块只有一个输出值，就使用 export default，如果模块有多个输出值，就不使用 export default，export default 与普通的 export 不要同时使用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// bad</span><br><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br>    <br><span class="hljs-comment">// good</span><br><span class="hljs-keyword">import</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如果模块默认输出一个函数，函数名的首字母应该小写</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">makeStyleGuide</span>(<span class="hljs-params"></span>) &#123;<br> <br>&#125;<br><br> <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> makeStyleGuide;<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>如果模块默认输出一个对象，对象名的首字母应该大写</li>
-</ul>
+</li>
+<li><p>如果模块默认输出一个对象，对象名的首字母应该大写</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> <span class="hljs-title class_">StyleGuide</span> = &#123;<br>    <span class="hljs-attr">es6</span>: &#123;<br>    &#125;<br>  &#125;;<br><br>  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">StyleGuide</span>;<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="rice-cracker-method-方法命名命名规范"><a href="#rice-cracker-method-方法命名命名规范" class="headerlink" title=":rice_cracker:method 方法命名命名规范"></a>:rice_cracker:method 方法命名命名规范</h4><ul>
-<li>驼峰式命名，统一使用动词或者动词+名词形式</li>
+</li>
 </ul>
+<h4 id="🍙method-方法命名命名规范"><a href="#🍙method-方法命名命名规范" class="headerlink" title="🍙method 方法命名命名规范"></a>🍙method 方法命名命名规范</h4><ul>
+<li><p>驼峰式命名，统一使用动词或者动词+名词形式</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br> jumpPage、openCarInfoDialog <br>&lt;!-- 避免 --&gt;<br> go、nextPage、show、open、login<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>如果是请求什么数据的需要以data来结尾</li>
-</ul>
+</li>
+<li><p>如果是请求什么数据的需要以data来结尾</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br> getListData、postFormData <br>&lt;!-- 避免 --&gt;<br> takeData、confirmData、getList、postForm<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>尽量使用常用单词开头（set、get、go、can、has、is）</li>
-</ul>
+</li>
+<li><p>尽量使用常用单词开头（set、get、go、can、has、is）</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">get 获取/set 设置,<br>add 增加/remove 删除<br>create 创建/destory 移除<br>start 启动/stop 停止<br>open 打开/close 关闭,<br>read 读取/write 写入<br>load 载入/save 保存,<br>create 创建/destroy 销毁<br>begin 开始/end 结束,<br>backup 备份/restore 恢复<br>import 导入/export 导出,<br>split 分割/merge 合并<br>inject 注入/extract 提取,<br>attach 附着/detach 脱离<br>bind 绑定/separate 分离,<br>view 查看/browse 浏览<br>edit 编辑/modify 修改,<br>select 选取/mark 标记<br>copy 复制/paste 粘贴,<br>undo 撤销/redo 重做<br>insert 插入/delete 移除,<br>add 加入/append 添加<br>clean 清理/clear 清除,<br>index 索引/sort 排序<br>find 查找/search 搜索,<br>increase 增加/decrease 减少<br>play 播放/pause 暂停,<br>launch 启动/run 运行<br>compile 编译/execute 执行,<br>debug 调试/trace 跟踪<br>observe 观察/listen 监听,<br>build 构建/publish 发布<br>input 输入/output 输出,<br>encode 编码/decode 解码<br>encrypt 加密/decrypt 解密,<br>compress 压缩/decompress 解压缩<br>pack 打包/unpack 解包,<br>parse 解析/emit 生成<br>connect 连接/disconnect 断开,<br>send 发送/receive 接收<br>download 下载/upload 上传,<br>refresh 刷新/synchronize 同步<br>update 更新/revert 复原,<br>lock 锁定/unlock 解锁<br>check out 签出/check in 签入,<br>submit 提交/commit 交付<br>push 推/pull 拉,<br>expand 展开/collapse 折叠<br>begin 起始/end 结束,<br>start 开始/finish 完成<br>enter 进入/exit 退出,<br>abort 放弃/quit 离开<br>obsolete 废弃/depreciate 废旧,<br>collect 收集/aggregate 聚集<br></code></pre></td></tr></table></figure>
-
-<ul>
+</li>
 <li><p>props 命名</p>
 <p>在声明 prop 的时候，其命名应该始终使用 camelCase，而在模板中应该始终使用 kebab-case</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- bad --&gt;<br>&lt;script&gt;<br>props: &#123;<br>  &#x27;greeting-text&#x27;: String<br>&#125;<br>&lt;/script&gt;<br><br>&lt;welcome-message greetingText=&quot;hi&quot;&gt;&lt;/welcome-message&gt;<br><br>&lt;!-- good --&gt;<br>&lt;script&gt;<br>props: &#123;<br>  greetingText: String<br>&#125;<br>&lt;/script&gt;<br><br>&lt;welcome-message greeting-text=&quot;hi&quot;&gt;&lt;/welcome-message&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- bad --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-attr">props</span>: &#123;</span><br><span class="language-javascript">  <span class="hljs-string">&#x27;greeting-text&#x27;</span>: <span class="hljs-title class_">String</span></span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">welcome-message</span> <span class="hljs-attr">greetingText</span>=<span class="hljs-string">&quot;hi&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">welcome-message</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- good --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-attr">props</span>: &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">greetingText</span>: <span class="hljs-title class_">String</span></span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">welcome-message</span> <span class="hljs-attr">greeting-text</span>=<span class="hljs-string">&quot;hi&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">welcome-message</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>PS:特殊情况</p>
 <ul>
@@ -699,7 +772,7 @@
 </li>
 <li><p>为v-for设置键值</p>
 <p>总是用 key 配合 v-for。<br>在组件上_总是_必须用 key 配合 v-for，以便维护内部组件及其子树的状态。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>&lt;ul&gt;<br>  &lt;li<br>    v-for=&quot;todo in todos&quot;<br>    :key=&quot;todo.id&quot;<br>  &gt;<br>    &#123;&#123; todo.text &#125;&#125;<br>  &lt;/li&gt;<br>&lt;/ul&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span></span><br><span class="hljs-tag">    <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;todo in todos&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;todo.id&quot;</span></span><br><span class="hljs-tag">  &gt;</span><br>    &#123;&#123; todo.text &#125;&#125;<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>避免 v-if 和 v-for 用在一起</p>
 <p>永远不要把 v-if 和 v-for 同时用在同一个元素上。<br> 一般我们在两种常见的情况下会倾向于这样做：</p>
@@ -707,27 +780,27 @@
 <li>为了过滤一个列表中的项目 (比如 v-for&#x3D;”user in users” v-if&#x3D;”user.isActive”)。在这种情形下，请将 users 替换为一个计算属性 (比如 activeUsers)，让其返回过滤后的列表。</li>
 <li>为了避免渲染本应该被隐藏的列表 (比如 v-for&#x3D;”user in users” v-if&#x3D;”shouldShowUsers”)。这种情形下，请将 v-if 移动至容器元素上 (比如 ul, ol)</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br>&lt;ul v-if=&quot;shouldShowUsers&quot;&gt;<br>  &lt;li<br>    v-for=&quot;user in users&quot;<br>    :key=&quot;user.id&quot;<br>  &gt;<br>    &#123;&#123; user.name &#125;&#125;<br>  &lt;/li&gt;<br>&lt;/ul&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;shouldShowUsers&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span></span><br><span class="hljs-tag">    <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;user in users&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;user.id&quot;</span></span><br><span class="hljs-tag">  &gt;</span><br>    &#123;&#123; user.name &#125;&#125;<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>指令缩写</p>
 <p>都用指令缩写 (用 : 表示 v-bind: 和用 @ 表示 v-on:)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">// bad<br>  v-bind:class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  v-on:click=&quot;getListData&quot;<br><br>// good<br>  :class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  @click=&quot;getListData&quot;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html">// bad<br>  v-bind:class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  v-on:click=&quot;getListData&quot;<br><br>// good<br>  :class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  @click=&quot;getListData&quot;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>多个特性的元素规范</p>
 <p>多个特性的元素应该分多行撰写，每个特性一行。(增强更易读)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs vue">&lt;!-- bad --&gt;<br>&lt;img src=&quot;https://vuejs.org/images/logo.png&quot; alt=&quot;Vue Logo&quot;&gt;<br>&lt;my-component foo=&quot;a&quot; bar=&quot;b&quot; baz=&quot;c&quot;&gt;&lt;/my-component&gt;<br><br>&lt;!-- good --&gt;<br>&lt;img<br>  src=&quot;https://vuejs.org/images/logo.png&quot;<br>  alt=&quot;Vue Logo&quot;<br>&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- bad --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://vuejs.org/images/logo.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Vue Logo&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">&quot;a&quot;</span> <span class="hljs-attr">bar</span>=<span class="hljs-string">&quot;b&quot;</span> <span class="hljs-attr">baz</span>=<span class="hljs-string">&quot;c&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- good --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">img</span></span><br><span class="hljs-tag">  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://vuejs.org/images/logo.png&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Vue Logo&quot;</span></span><br><span class="hljs-tag">&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>元素特性的顺序</p>
 <p>原生属性放前面，指令放后面</p>
-<figure class="highlight nestedtext"><table><tr><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-bullet">-</span> <span class="hljs-string">class</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">id,ref</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">name</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">data-*</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">src, for, type, href,value,max-length,max,min,pattern</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">title, alt，placeholder</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">aria-*, role</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">required,readonly,disabled</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">is</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-for</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">key</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-if</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-else-if</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-else</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-show</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-cloak</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-pre</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-once</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-model</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-bind,:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-on,@</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-html</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">v-text</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">- <span class="hljs-keyword">class</span><br>  - id,ref<br>  - name<br>  - data-*<br>  - src, <span class="hljs-keyword">for</span>, type, href,value,max-length,max,min,pattern<br>  - title, alt，placeholder<br>  - aria-*, role<br>  - required,readonly,disabled<br>  - is<br>  - v-<span class="hljs-keyword">for</span><br>  - key<br>  - v-<span class="hljs-keyword">if</span><br>  - v-<span class="hljs-keyword">else</span>-<span class="hljs-keyword">if</span><br>  - v-<span class="hljs-keyword">else</span><br>  - v-show<br>  - v-cloak<br>  - v-pre<br>  - v-once<br>  - v-model<br>  - v-bind,:<br>  - v-on,@<br>  - v-html<br>  - v-text<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="rice-cracker-其他"><a href="#rice-cracker-其他" class="headerlink" title=":rice_cracker:其他"></a>:rice_cracker:其他</h4><ul>
+<h4 id="🍙其他"><a href="#🍙其他" class="headerlink" title="🍙其他"></a>🍙其他</h4><ul>
 <li>避免 this.$parent</li>
 <li>调试信息 console.log() debugger 使用完及时删除</li>
 <li>除了三目运算，if,else 等禁止简写</li>
 </ul>
-<h2 id="oden-注释规范"><a href="#oden-注释规范" class="headerlink" title=":oden:注释规范"></a>:oden:注释规范</h2><p>​    代码注释在一个项目的后期维护中显的尤为重要，所以我们要为每一个被复用的组件编写组件使用说明，为组件中每一个方法编写方法说明</p>
-<h4 id="rice-cracker-务必添加注释列表"><a href="#rice-cracker-务必添加注释列表" class="headerlink" title=":rice_cracker:务必添加注释列表"></a>:rice_cracker:务必添加注释列表</h4><ul>
+<h2 id="🍢注释规范"><a href="#🍢注释规范" class="headerlink" title="🍢注释规范"></a>🍢注释规范</h2><p>​    代码注释在一个项目的后期维护中显的尤为重要，所以我们要为每一个被复用的组件编写组件使用说明，为组件中每一个方法编写方法说明</p>
+<h4 id="🍙务必添加注释列表"><a href="#🍙务必添加注释列表" class="headerlink" title="🍙务必添加注释列表"></a>🍙务必添加注释列表</h4><ul>
 <li>公共组件使用说明</li>
 <li>各组件中重要函数或者类说明</li>
 <li>复杂的业务逻辑处理说明</li>
@@ -736,7 +809,7 @@
 <li>注释块必须以<code>/**（至少两个星号开头）**/</code></li>
 <li>单行注释使用<code>//</code></li>
 </ul>
-<h2 id="oden-CSS规范"><a href="#oden-CSS规范" class="headerlink" title=":oden:CSS规范"></a>:oden:CSS规范</h2><ul>
+<h2 id="🍢CSS规范"><a href="#🍢CSS规范" class="headerlink" title="🍢CSS规范"></a>🍢CSS规范</h2><ul>
 <li><p>统一使用<code>-</code>连字符</p>
 </li>
 <li><p>省略值为 0 时的单位</p>
@@ -746,11 +819,8 @@
 <li><p>建议并适当缩写值，提高可读性，特殊情况除外</p>
 <p>“建议并适当”是因为缩写总是会包含一系列的值，而有时候我们并不希望设置某一值，反而造成了麻烦，那么这时候你可以不缩写，而是分开写。</p>
 <p>当然，在一切可以缩写的情况下，请务必缩写，它最大的好处就是节省了字节，便于维护，并使阅读更加一目了然</p>
-</li>
-</ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css">// bad<br>  <span class="hljs-selector-class">.box</span>&#123;<br>    <span class="hljs-attribute">border-top-style</span>: none;<br>    <span class="hljs-attribute">font-family</span>: palatino, georgia, serif;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.6</span>;<br>    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">2em</span>;<br>    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1em</span>;<br>    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;<br>    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;<br>  &#125;<br><br>  // good<br>  <span class="hljs-selector-class">.box</span>&#123;<br>    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">font</span>: <span class="hljs-number">100%</span>/<span class="hljs-number">1.6</span> palatino, georgia, serif;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">2em</span>;<br>  &#125;<br></code></pre></td></tr></table></figure>
-
-<ul>
+</li>
 <li><p>分类的命名方法</p>
 <ul>
 <li>使用单个字母加上<code>-</code>为前缀</li>
@@ -790,7 +860,7 @@
   </entry>
   <entry>
     <title>了解Docker</title>
-    <url>/2024/01/11/%E4%BA%86%E8%A7%A3Docker/</url>
+    <url>/2022/07/20/%E4%BA%86%E8%A7%A3Docker/</url>
     <content><![CDATA[<h2 id="了解Docker"><a href="#了解Docker" class="headerlink" title="了解Docker"></a>了解Docker</h2><p>Docker是一个开源的<code>应用容器引擎</code>，让开发者可以打包他们的应用以及依赖到一个<code>可移植</code>的容器中，然后发布到任何流行的Linux或Windows操作系统的机器上，也可以实现<code>虚拟化</code>，容器是完全使用<code>沙箱机制</code>，相互之间不会有任何接口</p>
 <p>一个完整的Docker有以下几个部分组成：</p>
 <ul>
@@ -927,7 +997,7 @@
   </entry>
   <entry>
     <title>使用VMware安装Centos7环境</title>
-    <url>/2024/01/11/%E4%BD%BF%E7%94%A8VMware%E5%AE%89%E8%A3%85Centos7%E7%8E%AF%E5%A2%83/</url>
+    <url>/2022/07/15/%E4%BD%BF%E7%94%A8VMware%E5%AE%89%E8%A3%85Centos7%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<h2 id="使用VMware安装Centos7环境"><a href="#使用VMware安装Centos7环境" class="headerlink" title="使用VMware安装Centos7环境"></a>使用VMware安装Centos7环境</h2><h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><p>先分别将VMware、Centos7、Xshell和Xftp安装好</p>
 <p>基本都是直接下一步</p>
 <p>PS：VMware最好取消更新</p>
@@ -1092,7 +1162,7 @@
   </entry>
   <entry>
     <title>初识Electron</title>
-    <url>/2024/01/11/%E5%88%9D%E8%AF%86Electron/</url>
+    <url>/2022/07/02/%E5%88%9D%E8%AF%86Electron/</url>
     <content><![CDATA[<h2 id="初识Electron"><a href="#初识Electron" class="headerlink" title="初识Electron"></a>初识Electron</h2><p>​      Electron是一个JavaScript、HTML、CSS构建桌面应用程序的框架。通过将Chromium和Node.js嵌入到它的二进制文件中，Electron允许维护一个JavaScript代码库并创建可在Windows、macOS、Linux上运行的跨平台应用程序——无需本地开发经验。</p>
 <p>本质上为浏览器内置了Node环境，从而可以控制本地文件</p>
 <p>PS：Visual Studio Code &#x3D; TypeScript + Electron</p>
@@ -1175,62 +1245,6 @@
       </categories>
       <tags>
         <tag>Electron</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>UML---类图</title>
-    <url>/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="bulb-类图简介"><a href="#bulb-类图简介" class="headerlink" title=":bulb:类图简介"></a>:bulb:类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
-<h2 id="bulb-类图结构"><a href="#bulb-类图结构" class="headerlink" title=":bulb:类图结构"></a>:bulb:类图结构</h2><p><img src="https://img-blog.csdnimg.cn/20210424151025861.JPG"><br><img src="https://img-blog.csdnimg.cn/20210424152520880.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br><em>指定接口的方式：再类名上方添加<interface></em></p>
-<h2 id="bulb-类图中的事物"><a href="#bulb-类图中的事物" class="headerlink" title=":bulb:类图中的事物"></a>:bulb:类图中的事物</h2><ul>
-<li>接口：一组操作的集合，只有操作的声明而没有实现</li>
-<li>抽象类：不能被实例化的类，一般至少包含一个抽象操作</li>
-<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类<br> <img src="https://img-blog.csdnimg.cn/20210424154652676.JPG"></li>
-</ul>
-<h2 id="bulb-类图中的关系及代码映射（java）"><a href="#bulb-类图中的关系及代码映射（java）" class="headerlink" title=":bulb:类图中的关系及代码映射（java）"></a>:bulb:类图中的关系及代码映射（java）</h2><ul>
-<li><p>类的映射<br> <img src="https://img-blog.csdnimg.cn/20210424163708231.png"><br>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类<br>  <img src="https://img-blog.csdnimg.cn/2021042416150334.png"></p>
-</li>
-</ul>
-<p> 1.双向关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>   <span class="hljs-keyword">private</span> Customer customer;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>   2.单向关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>3.自关联</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>   <span class="hljs-keyword">private</span> Node subNode;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-<ul>
-<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br> eg:学校类与学生类<br> <img src="https://img-blog.csdnimg.cn/20210424171005963.png"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在<br>eg:窗口类和菜单类<br><img src="https://img-blog.csdnimg.cn/20210424171101192.png"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）<br><img src="https://img-blog.csdnimg.cn/2021042417121472.png"></p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>依赖关系有如下三种情况：<br>     1、A类是B类中的（某中方法的）局部变量；<br>      2、A类是B类方法当中的一个参数；<br>     3、A类向B类发送消息，从而影响B类发生变化</p>
-<ul>
-<li>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</li>
-</ul>
-<p> 要求：<br>     1、子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；<br>     2、子类中除了与父类一致的信息以外，还包括额外的信息；<br>     3、可以使用父类的实例的地方，也可以使用子类的实例；</p>
-   <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Tiger</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-<ul>
-<li>实现关系（Realization）：接口和实现类的关系（实现类指向接口）<br><img src="https://img-blog.csdnimg.cn/20210424170019420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="bulb-生动形象的实例"><a href="#bulb-生动形象的实例" class="headerlink" title=":bulb:生动形象的实例"></a>:bulb:生动形象的实例</h2><p><img src="https://img-blog.csdnimg.cn/20210424163039410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70"><br>:pushpin:图源：<a href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a><br>:pushpin:参考博客：<a href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
-]]></content>
-      <categories>
-        <category>软件工程</category>
-      </categories>
-      <tags>
-        <tag>UML</tag>
-        <tag>类图</tag>
       </tags>
   </entry>
 </search>

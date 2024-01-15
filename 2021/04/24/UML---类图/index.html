@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content=":bulb:类图简介​		 类图（Class diag...">
+  <meta name="description" content="📍类图简介​		 类图（Class diagram）...">
   <meta name="author" content="Gyanga">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -192,13 +192,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://framerusercontent.com/images/yt42IQ1hjQEaEkfQezUykULm3sU.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/hMXHfj35FGvHNexFxn2Oq1bDK4.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">UML---类图</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>April 24, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2223</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2312</span>
     </div>
   </div>
 </section>
@@ -207,56 +207,89 @@
         
           <p>简介+结构+事务+关系及代码映射+实例</p>
         
-        <h2 id="bulb-类图简介"><a href="#bulb-类图简介" class="headerlink" title=":bulb:类图简介"></a>:bulb:类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
-<h2 id="bulb-类图结构"><a href="#bulb-类图结构" class="headerlink" title=":bulb:类图结构"></a>:bulb:类图结构</h2><p><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424151025861.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ><br><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424152520880.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ><br><em>指定接口的方式：再类名上方添加<interface></em></p>
-<h2 id="bulb-类图中的事物"><a href="#bulb-类图中的事物" class="headerlink" title=":bulb:类图中的事物"></a>:bulb:类图中的事物</h2><ul>
+        <h2 id="📍类图简介"><a href="#📍类图简介" class="headerlink" title="📍类图简介"></a>📍类图简介</h2><p>​		 类图（Class diagram）是显示了模型的静态结构，模型中存在的类、类的内部结构以及它们与其他类的关系等。（类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系）</p>
+<h2 id="📍类图结构"><a href="#📍类图结构" class="headerlink" title="📍类图结构"></a>📍类图结构</h2><img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424151025861.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" />
+<img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424152520880.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" />
+指定接口的方式：再类名上方添加*< interface >*
+
+<h2 id="📍类图中的事物"><a href="#📍类图中的事物" class="headerlink" title="📍类图中的事物"></a>📍类图中的事物</h2><ul>
 <li>接口：一组操作的集合，只有操作的声明而没有实现</li>
 <li>抽象类：不能被实例化的类，一般至少包含一个抽象操作</li>
-<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类<br> <img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424154652676.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></li>
+<li>模板类：一种参数化的类，在编译时把模板参数绑定到不同的数据类型，从而产生不同的类 <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424154652676.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" /></li>
 </ul>
-<h2 id="bulb-类图中的关系及代码映射（java）"><a href="#bulb-类图中的关系及代码映射（java）" class="headerlink" title=":bulb:类图中的关系及代码映射（java）"></a>:bulb:类图中的关系及代码映射（java）</h2><ul>
-<li><p>类的映射<br> <img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424163708231.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ><br>java:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类<br>  <img   class="lazyload" data-original="https://img-blog.csdnimg.cn/2021042416150334.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
-</li>
-</ul>
-<p> 1.双向关联</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>   <span class="hljs-keyword">private</span> Customer customer;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>   2.单向关联</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>3.自关联</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>   <span class="hljs-keyword">private</span> Node subNode;<br>   ...<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="📍类图中的关系及代码映射（java）"><a href="#📍类图中的关系及代码映射（java）" class="headerlink" title="📍类图中的关系及代码映射（java）"></a>📍类图中的关系及代码映射（java）</h2><ul>
+<li><p>类的映射</p>
+ <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424163708231.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
+java:
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Start</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Stop</span><span class="hljs-params">()</span>;<br>   <span class="hljs-keyword">public</span> abstrct <span class="hljs-type">int</span> <span class="hljs-title function_">Run</span><span class="hljs-params">(<span class="hljs-type">float</span> fSpeed)</span>;<br>   <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> fMaxSpeed;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>关联关系（Association）：对象之间一种引用关系，由使用类指向被关联类（可以是单向和双向）<br> eg：客户类与订单类</p>
+ <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/2021042416150334.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
 
-<ul>
-<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br> eg:学校类与学生类<br> <img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424171005963.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>双向关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Order[] order;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span>&#123;<br>  <span class="hljs-keyword">private</span> Customer customer;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>单向关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Customer</span>&#123;<br>  <span class="hljs-keyword">private</span> Address address;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Address</span>&#123;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>自关联</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&#123;<br>  <span class="hljs-keyword">private</span> Node subNode;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在<br>eg:窗口类和菜单类<br><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424171101192.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure></li>
-<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）<br><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/2021042417121472.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<li><p>聚合关系（Aggregation）：一种不稳定的包含关系，较强于一般关联，整体和局部的关系，局部也可单独存在<br>   eg:学校类与学生类</p>
+   <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424171005963.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
+
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">School</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Student&gt; students;<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>依赖关系有如下三种情况：<br>     1、A类是B类中的（某中方法的）局部变量；<br>      2、A类是B类方法当中的一个参数；<br>     3、A类向B类发送消息，从而影响B类发生变化</p>
-<ul>
-<li>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</li>
-</ul>
-<p> 要求：<br>     1、子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；<br>     2、子类中除了与父类一致的信息以外，还包括额外的信息；<br>     3、可以使用父类的实例的地方，也可以使用子类的实例；</p>
+<li><p>组合关系（Composition）：一种强烈的聚合关系，部分不能脱离整体存在</p>
+<pre><code>eg: 窗口类和菜单类
+
+&lt;img src=&quot;https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424171101192.png&quot; /&gt;
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>&#123;<br>  ...<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>&#123;<br>  <span class="hljs-keyword">private</span> List&lt;Menu&gt; menus;<br>  ...<br>&#125;<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>依赖关系（Dependency）：对象之间最弱的一种关联方式，临时性的关联。一般指由局部变量、函数参数、返回值建立的对其他对象的调用关系。（使用类指向被依赖类）</p>
+   <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/2021042417121472.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
+
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Screwdriver</span> &#123;    <span class="hljs-comment">//螺丝刀，作为人类的工具，是用来被人类使用的</span><br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">screw</span><span class="hljs-params">(Screwdriver src)</span>&#123;    <span class="hljs-comment">//拧螺丝，需使用螺丝刀</span><br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>   依赖关系有如下三种情况：</p>
+<ol>
+<li>A类是B类中的（某中方法的）局部变量；</li>
+<li>A类是B类方法当中的一个参数；</li>
+<li>A类向B类发送消息，从而影响B类发生变化</li>
+</ol>
+</li>
+<li><p>泛化关系（Generalization）：对象之间耦合度最大的一种关系，子类继承父类的所有细节。（箭头从子类指向父类）</p>
+<pre><code>要求：
+</code></pre>
+<ol>
+<li>子类与父类应该完全一致，父类所具有的属性、操作，子类应该都有；</li>
+<li>子类中除了与父类一致的信息以外，还包括额外的信息；</li>
+<li>可以使用父类的实例的地方，也可以使用子类的实例；</li>
+</ol>
    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Tiger</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span>&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>实现关系（Realization）：接口和实现类的关系（实现类指向接口）</p>
+   <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424170019420.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
 
-
-<ul>
-<li>实现关系（Realization）：接口和实现类的关系（实现类指向接口）<br><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424170019420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Vechicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ship</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>   &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Vehicle</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">move</span><span class="hljs-params">()</span>&#123;<br>     ...<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="bulb-生动形象的实例"><a href="#bulb-生动形象的实例" class="headerlink" title=":bulb:生动形象的实例"></a>:bulb:生动形象的实例</h2><p><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20210424163039410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0d5YW5nYQ==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ><br>:pushpin:图源：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a><br>:pushpin:参考博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
+<h2 id="📍生动形象的实例"><a href="#📍生动形象的实例" class="headerlink" title="📍生动形象的实例"></a>📍生动形象的实例</h2> <img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/20210424163039410.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  />
+
+<p>📌图源：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/57620b762160">https://www.jianshu.com/p/57620b762160</a></p>
+<p>📌参考博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chen-chen-chen/p/12295463.html">https://www.cnblogs.com/chen-chen-chen/p/12295463.html</a></p>
 
       </section>
       <section class="extra">
         
-          <meta charset="UTF-8">
-<ul class="copyright">
+          <ul class="copyright">
   
     <li><strong>本文作者：</strong>Gyanga</li>
     <li><strong>本文链接：</strong><a href="https://gyanga.github.io/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/index.html" title="https:&#x2F;&#x2F;gyanga.github.io&#x2F;2021&#x2F;04&#x2F;24&#x2F;UML---%E7%B1%BB%E5%9B%BE&#x2F;index.html">https:&#x2F;&#x2F;gyanga.github.io&#x2F;2021&#x2F;04&#x2F;24&#x2F;UML---%E7%B1%BB%E5%9B%BE&#x2F;index.html</a></li>
@@ -270,7 +303,7 @@
 
         
   <nav class="nav">
-    <a href="/2024/01/11/About%20me/"><i class="iconfont iconleft"></i>About me</a>
+    <a href="/2021/08/02/H5%E6%94%AF%E4%BB%98/"><i class="iconfont iconleft"></i>H5支付</a>
     <a></a>
   </nav>
 
@@ -315,7 +348,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#bulb-%E7%B1%BB%E5%9B%BE%E7%AE%80%E4%BB%8B"><span class="toc-text">:bulb:类图简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bulb-%E7%B1%BB%E5%9B%BE%E7%BB%93%E6%9E%84"><span class="toc-text">:bulb:类图结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bulb-%E7%B1%BB%E5%9B%BE%E4%B8%AD%E7%9A%84%E4%BA%8B%E7%89%A9"><span class="toc-text">:bulb:类图中的事物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bulb-%E7%B1%BB%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB%E5%8F%8A%E4%BB%A3%E7%A0%81%E6%98%A0%E5%B0%84%EF%BC%88java%EF%BC%89"><span class="toc-text">:bulb:类图中的关系及代码映射（java）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bulb-%E7%94%9F%E5%8A%A8%E5%BD%A2%E8%B1%A1%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">:bulb:生动形象的实例</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%8D%E7%B1%BB%E5%9B%BE%E7%AE%80%E4%BB%8B"><span class="toc-text">📍类图简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%8D%E7%B1%BB%E5%9B%BE%E7%BB%93%E6%9E%84"><span class="toc-text">📍类图结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%8D%E7%B1%BB%E5%9B%BE%E4%B8%AD%E7%9A%84%E4%BA%8B%E7%89%A9"><span class="toc-text">📍类图中的事物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%8D%E7%B1%BB%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB%E5%8F%8A%E4%BB%A3%E7%A0%81%E6%98%A0%E5%B0%84%EF%BC%88java%EF%BC%89"><span class="toc-text">📍类图中的关系及代码映射（java）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%8D%E7%94%9F%E5%8A%A8%E5%BD%A2%E8%B1%A1%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">📍生动形象的实例</span></a></li></ol>
   </aside>
 
         

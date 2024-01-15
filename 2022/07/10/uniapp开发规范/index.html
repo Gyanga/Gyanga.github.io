@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>uniapp开发规范 - Gyang&#39;s personal space</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="🍢uniapp开发规范为了实现多端兼容，综合考虑编译...">
+  <meta name="author" content="Gyanga">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/favicon-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/favicon-logo.png" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: 'search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">uniapp开发规范</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 图册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/9Jlr2le1SuqwONBYcQIe7KX14U0.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">uniapp开发规范</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>July 10, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>9706</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+          <p>结构化规范+组件规范+编码规范+注释规范+css规范</p>
+        
+        <h2 id="🍢uniapp开发规范"><a href="#🍢uniapp开发规范" class="headerlink" title="🍢uniapp开发规范"></a>🍢<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/frame?id=%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83">uniapp开发规范</a></h2><p>为了实现多端兼容，综合考虑编译速度、运行性能等因素，<code>uni-app</code> 约定了如下开发规范：</p>
+<ul>
+<li>页面文件遵循 <a target="_blank" rel="noopener" href="https://vue-loader.vuejs.org/zh/spec.html">Vue 单文件组件 (SFC) 规范</a></li>
+<li>组件标签靠近小程序规范，详见<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/component/README">uni-app 组件规范</a></li>
+<li>接口能力（JS API）靠近微信小程序规范，但需将前缀 <code>wx</code> 替换为 <code>uni</code>，详见<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/README">uni-app接口规范</a></li>
+<li>数据绑定及事件处理同 <code>Vue.js</code> 规范，同时补充了App及页面的生命周期</li>
+<li>为兼容多端运行，建议使用flex布局进行开发</li>
+</ul>
+<h2 id="🍢结构化规范"><a href="#🍢结构化规范" class="headerlink" title="🍢结构化规范"></a>🍢结构化规范</h2><h4 id="🍙默认模板："><a href="#🍙默认模板：" class="headerlink" title="🍙默认模板："></a>🍙默认模板：</h4><p>┌─pages                  业务页面文件存放的目录<br>│  ├─index<br>│  │  └─index.vue       index页面<br>│  └─list<br>│     └─list.vue             list页面<br>├─static                   存放应用引用的本地静态资源（如图片、视频等）的目录，ps:静态资源只能存放于此<br>├─main.js                Vue初始化入口文件<br>├─App.vue              应用配置，用来配置App全局样式以及监听 <a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">应用生命周期</a><br>├─manifest.json     配置应用名称、appid、logo、版本等打包信息，<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/collocation/manifest">详见</a></p>
+<p>├─pages.json          配置页面路由、导航条、选项卡等页面类信息，<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/collocation/pages">详见</a><br>└─uni.scss               uni-app内置的常用样式变量</p>
+<h4 id="🍙添加目录文件夹及子文件规范："><a href="#🍙添加目录文件夹及子文件规范：" class="headerlink" title="🍙添加目录文件夹及子文件规范："></a>🍙添加目录文件夹及子文件规范：</h4><p>├─ api                     接口，统一管理</p>
+<p>├─components       符合vue组件规范的uni-app组件目录<br>│  └─comp-a.vue   可复用的a组件</p>
+<p>├─filters                  过滤器，全局工具</p>
+<p>├─mock                  模拟接口，临时存放</p>
+<p>├─store                   vuex, 统一管理</p>
+<p>├─utils                    存放自己封装的工具类函数</p>
+<h4 id="🍙文件命名："><a href="#🍙文件命名：" class="headerlink" title="🍙文件命名："></a>🍙文件命名：</h4><ul>
+<li>尽量是名词,且使用驼峰命名法</li>
+<li>开头的单词就是所属模块名字（workbenchIndex、workbenchList、workbenchEdit）</li>
+<li>名字至少两个单词（good: workbenchIndex）（bad:workbench）</li>
+</ul>
+<h2 id="🍢组件规范"><a href="#🍢组件规范" class="headerlink" title="🍢组件规范"></a>🍢组件规范</h2><h4 id="🍙组件文件："><a href="#🍙组件文件：" class="headerlink" title="🍙组件文件："></a>🍙组件文件：</h4><p>只要有能够拼接文件的构建系统，就把每个组件单独分成文件。<br>当你需要编辑一个组件或查阅一个组件的用法时，可以更快速的找到它。</p>
+<ul>
+<li><p>vue组件</p>
+<ul>
+<li>import导入组件</li>
+<li>components里注册组件</li>
+<li>template中使用组件</li>
+</ul>
+</li>
+<li><p>easycom组件</p>
+<p>组件安装在项目的components目录下或<code>uni_modules</code>目录下，并符合<code>components/组件名称/组件名称.vue</code>目录结构</p>
+<p>PS：<code>easycom</code>打包后会自动剔除没有使用的组件，对组件库的使用尤为友好</p>
+</li>
+</ul>
+<h4 id="🍙组件命名规范："><a href="#🍙组件命名规范：" class="headerlink" title="🍙组件命名规范："></a>🍙组件命名规范：</h4><ul>
+<li>有意义的: 不过于具体，也不过于抽象</li>
+<li>简短: 2 到 3 个单词</li>
+<li>具有可读性: 以便于沟通交流</li>
+</ul>
+<p>同时还需要注意：</p>
+<ul>
+<li><p>必须符合<strong>自定义元素规范</strong>: 使用<strong>连字符</strong><code>-</code>分隔单词，切勿使用保留字（可区分页面和组件）</p>
+</li>
+<li><p>组件里面的name要和组件的名字保持一致</p>
+</li>
+<li><p><code>app-</code>前缀作为命名空间: 如果非常通用的话可使用一个单词来命名，这样可以方便于其它项目里复用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">app-header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">app-header</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">user-list</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">user-list</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">btn-group</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">btn-group</span>&gt;</span> <span class="hljs-comment">&lt;!-- 虽然简短但是可读性差. 使用 `button-group` 替代 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ui-slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-slider</span>&gt;</span> <span class="hljs-comment">&lt;!-- ui 前缀太过于宽泛，在这里意义不明确 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">slider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slider</span>&gt;</span> <span class="hljs-comment">&lt;!-- 与自定义元素规范不兼容 --&gt;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="🍙组件数据："><a href="#🍙组件数据：" class="headerlink" title="🍙组件数据："></a>🍙组件数据：</h4><p>组件的 data 必须是一个函数。<br>当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&lt;!-- 推荐 --&gt;<br><span class="hljs-comment">// In a .vue file</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  data () &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;bar&#x27;</span><br>    &#125;<br>  &#125;<br>&#125;<br><span class="hljs-comment">// 在一个 Vue 的根实例上直接使用对象是可以的，</span><br><span class="hljs-comment">// 因为只存在一个这样的实例。</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Vue</span>(&#123;<br>  <span class="hljs-attr">data</span>: &#123;<br>    <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;bar&#x27;</span><br>  &#125;<br>&#125;)<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="🍙组件-props-原子化"><a href="#🍙组件-props-原子化" class="headerlink" title="🍙组件 props 原子化"></a>🍙组件 props 原子化</h4><p>为什么？</p>
+<ul>
+<li><p>使得组件 API 清晰直观</p>
+</li>
+<li><p>只使用原始类型和函数作为 props 使得组件的 API 更接近于 HTML(5) 原生元素</p>
+</li>
+<li><p>其它开发者更好的理解每一个 prop 的含义、作用</p>
+</li>
+<li><p>传递过于复杂的对象使得我们不能够清楚的知道哪些属性或方法被自定义组件使用，这使得代码难以重构和维护。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:values</span>=<span class="hljs-string">&quot;[10, 20]&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:min</span>=<span class="hljs-string">&quot;0&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:max</span>=<span class="hljs-string">&quot;100&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">:step</span>=<span class="hljs-string">&quot;5&quot;</span></span><br><span class="hljs-tag">  @<span class="hljs-attr">on-slide</span>=<span class="hljs-string">&quot;updateInputs&quot;</span></span><br><span class="hljs-tag">  @<span class="hljs-attr">on-end</span>=<span class="hljs-string">&quot;updateResults&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">range-slider</span> <span class="hljs-attr">:config</span>=<span class="hljs-string">&quot;complexConfigObject&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">range-slider</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="🍙将-this-赋值给-component-变量"><a href="#🍙将-this-赋值给-component-变量" class="headerlink" title="🍙将 this 赋值给 component 变量"></a>🍙将 this 赋值给 component 变量</h4><p>在 Vue.js 组件上下文中，this指向了组件实例。因此当你切换到了不同的上下文时，要确保 this 指向一个可用的 component 变量。</p>
+<p>换句话说，如果你正在使用 <code>ES6</code> 的话，就不要再编写 var self &#x3D; this; 这样的代码了，你可以安全地使用 Vue 组件。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">    <span class="hljs-title function_">hello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">    <span class="hljs-title function_">printHello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">hello</span>());</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">  &#125;,</span><br><span class="language-javascript">&#125;;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-comment">&lt;!-- 避免 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">    <span class="hljs-title function_">hello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">    <span class="hljs-title function_">printHello</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">const</span> self = <span class="hljs-variable language_">this</span>; <span class="hljs-comment">// 没有必要</span></span><br><span class="language-javascript">      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(self.<span class="hljs-title function_">hello</span>());</span><br><span class="language-javascript">    &#125;,</span><br><span class="language-javascript">  &#125;,</span><br><span class="language-javascript">&#125;;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="🍢编码规范"><a href="#🍢编码规范" class="headerlink" title="🍢编码规范"></a>🍢编码规范</h2><h4 id="🍙变量命名要求"><a href="#🍙变量命名要求" class="headerlink" title="🍙变量命名要求"></a>🍙变量命名要求</h4><ul>
+<li>定义变量使用<code> let</code> ,定义常量使用<code> const</code></li>
+<li>命名方法 : 变量使用驼峰命名法</li>
+</ul>
+<h4 id="🍙常量命名要求"><a href="#🍙常量命名要求" class="headerlink" title="🍙常量命名要求"></a>🍙常量命名要求</h4><ul>
+<li>命名方法: 全部大写</li>
+<li>命名规范: 使用大写字母和下划线来组合命名，下划线用以分割单词</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vue">const MAX_COUNT = 10<br>const URL = &#x27;https://www.baidu.com/&#x27;<br></code></pre></td></tr></table></figure>
+
+<h4 id="🍙解构赋值"><a href="#🍙解构赋值" class="headerlink" title="🍙解构赋值"></a>🍙解构赋值</h4><ul>
+<li><p>数组成员对变量赋值时，优先使用解构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 数组解构赋值</span><br> <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> first = arr[<span class="hljs-number">0</span>]<br> <span class="hljs-keyword">const</span> second = arr[<span class="hljs-number">1</span>]<br>  <br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> [first, second] = arr<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>函数的参数如果是对象的成员，优先使用解构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 对象解构赋值</span><br>  <span class="hljs-comment">// bad</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">user</span>) &#123;<br>    <span class="hljs-keyword">const</span> firstName = user.<span class="hljs-property">firstName</span><br>    <span class="hljs-keyword">const</span> lastName = user.<span class="hljs-property">lastName</span><br>  &#125;<br><br>  <span class="hljs-comment">// good</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">obj</span>) &#123;<br>    <span class="hljs-keyword">const</span> &#123; firstName, lastName &#125; = obj<br>  &#125;<br><br>  <span class="hljs-comment">// best</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">getFullName</span>(<span class="hljs-params">&#123; firstName, lastName &#125;</span>) &#123;&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>拷贝数组</p>
+<p>使用扩展运算符（…）拷贝数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br>  <br> <span class="hljs-comment">// bad</span><br> <span class="hljs-keyword">const</span> itemsCopy = items<br>  <br> <span class="hljs-comment">// good</span><br> <span class="hljs-keyword">const</span> itemsCopy = [...items]<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数</p>
+<p>需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 this</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// bad</span><br>  <span class="hljs-keyword">const</span> self = <span class="hljs-variable language_">this</span>;<br>  <span class="hljs-keyword">const</span> boundMethod = <span class="hljs-keyword">function</span>(<span class="hljs-params">...params</span>) &#123;<br>    <span class="hljs-keyword">return</span> method.<span class="hljs-title function_">apply</span>(self, params);<br>  &#125;<br><br>  <span class="hljs-comment">// acceptable</span><br>  <span class="hljs-keyword">const</span> boundMethod = method.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>);<br><br>  <span class="hljs-comment">// best</span><br>  <span class="hljs-keyword">const</span> <span class="hljs-title function_">boundMethod</span> = (<span class="hljs-params">...params</span>) =&gt; method.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>, params);<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>模块</p>
+<ul>
+<li><p>如果模块只有一个输出值，就使用 export default，如果模块有多个输出值，就不使用 export default，export default 与普通的 export 不要同时使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// bad</span><br><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br>    <br><span class="hljs-comment">// good</span><br><span class="hljs-keyword">import</span> myObject <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./importModule&#x27;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如果模块默认输出一个函数，函数名的首字母应该小写</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">makeStyleGuide</span>(<span class="hljs-params"></span>) &#123;<br> <br>&#125;<br><br> <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> makeStyleGuide;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如果模块默认输出一个对象，对象名的首字母应该大写</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> <span class="hljs-title class_">StyleGuide</span> = &#123;<br>    <span class="hljs-attr">es6</span>: &#123;<br>    &#125;<br>  &#125;;<br><br>  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">StyleGuide</span>;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="🍙method-方法命名命名规范"><a href="#🍙method-方法命名命名规范" class="headerlink" title="🍙method 方法命名命名规范"></a>🍙method 方法命名命名规范</h4><ul>
+<li><p>驼峰式命名，统一使用动词或者动词+名词形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br> jumpPage、openCarInfoDialog <br>&lt;!-- 避免 --&gt;<br> go、nextPage、show、open、login<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如果是请求什么数据的需要以data来结尾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;!-- 推荐 --&gt;<br> getListData、postFormData <br>&lt;!-- 避免 --&gt;<br> takeData、confirmData、getList、postForm<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>尽量使用常用单词开头（set、get、go、can、has、is）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs vue">get 获取/set 设置,<br>add 增加/remove 删除<br>create 创建/destory 移除<br>start 启动/stop 停止<br>open 打开/close 关闭,<br>read 读取/write 写入<br>load 载入/save 保存,<br>create 创建/destroy 销毁<br>begin 开始/end 结束,<br>backup 备份/restore 恢复<br>import 导入/export 导出,<br>split 分割/merge 合并<br>inject 注入/extract 提取,<br>attach 附着/detach 脱离<br>bind 绑定/separate 分离,<br>view 查看/browse 浏览<br>edit 编辑/modify 修改,<br>select 选取/mark 标记<br>copy 复制/paste 粘贴,<br>undo 撤销/redo 重做<br>insert 插入/delete 移除,<br>add 加入/append 添加<br>clean 清理/clear 清除,<br>index 索引/sort 排序<br>find 查找/search 搜索,<br>increase 增加/decrease 减少<br>play 播放/pause 暂停,<br>launch 启动/run 运行<br>compile 编译/execute 执行,<br>debug 调试/trace 跟踪<br>observe 观察/listen 监听,<br>build 构建/publish 发布<br>input 输入/output 输出,<br>encode 编码/decode 解码<br>encrypt 加密/decrypt 解密,<br>compress 压缩/decompress 解压缩<br>pack 打包/unpack 解包,<br>parse 解析/emit 生成<br>connect 连接/disconnect 断开,<br>send 发送/receive 接收<br>download 下载/upload 上传,<br>refresh 刷新/synchronize 同步<br>update 更新/revert 复原,<br>lock 锁定/unlock 解锁<br>check out 签出/check in 签入,<br>submit 提交/commit 交付<br>push 推/pull 拉,<br>expand 展开/collapse 折叠<br>begin 起始/end 结束,<br>start 开始/finish 完成<br>enter 进入/exit 退出,<br>abort 放弃/quit 离开<br>obsolete 废弃/depreciate 废旧,<br>collect 收集/aggregate 聚集<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>props 命名</p>
+<p>在声明 prop 的时候，其命名应该始终使用 camelCase，而在模板中应该始终使用 kebab-case</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- bad --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-attr">props</span>: &#123;</span><br><span class="language-javascript">  <span class="hljs-string">&#x27;greeting-text&#x27;</span>: <span class="hljs-title class_">String</span></span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">welcome-message</span> <span class="hljs-attr">greetingText</span>=<span class="hljs-string">&quot;hi&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">welcome-message</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- good --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-attr">props</span>: &#123;</span><br><span class="language-javascript">  <span class="hljs-attr">greetingText</span>: <span class="hljs-title class_">String</span></span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">welcome-message</span> <span class="hljs-attr">greeting-text</span>=<span class="hljs-string">&quot;hi&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">welcome-message</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>PS:特殊情况</p>
+<ul>
+<li>作用域不大临时变量可以简写，比如：str，num，bol，obj，fun，arr。</li>
+<li>循环变量可以简写，比如：i，j，k 等。</li>
+</ul>
+</li>
+<li><p>为v-for设置键值</p>
+<p>总是用 key 配合 v-for。<br>在组件上_总是_必须用 key 配合 v-for，以便维护内部组件及其子树的状态。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span></span><br><span class="hljs-tag">    <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;todo in todos&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;todo.id&quot;</span></span><br><span class="hljs-tag">  &gt;</span><br>    &#123;&#123; todo.text &#125;&#125;<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>避免 v-if 和 v-for 用在一起</p>
+<p>永远不要把 v-if 和 v-for 同时用在同一个元素上。<br> 一般我们在两种常见的情况下会倾向于这样做：</p>
+<ul>
+<li>为了过滤一个列表中的项目 (比如 v-for&#x3D;”user in users” v-if&#x3D;”user.isActive”)。在这种情形下，请将 users 替换为一个计算属性 (比如 activeUsers)，让其返回过滤后的列表。</li>
+<li>为了避免渲染本应该被隐藏的列表 (比如 v-for&#x3D;”user in users” v-if&#x3D;”shouldShowUsers”)。这种情形下，请将 v-if 移动至容器元素上 (比如 ul, ol)</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 推荐 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;shouldShowUsers&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">li</span></span><br><span class="hljs-tag">    <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;user in users&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;user.id&quot;</span></span><br><span class="hljs-tag">  &gt;</span><br>    &#123;&#123; user.name &#125;&#125;<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>指令缩写</p>
+<p>都用指令缩写 (用 : 表示 v-bind: 和用 @ 表示 v-on:)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html">// bad<br>  v-bind:class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  v-on:click=&quot;getListData&quot;<br><br>// good<br>  :class=&quot;&#123;&#x27;show-left&#x27;：true&#125;&quot;<br>  @click=&quot;getListData&quot;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>多个特性的元素规范</p>
+<p>多个特性的元素应该分多行撰写，每个特性一行。(增强更易读)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- bad --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://vuejs.org/images/logo.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Vue Logo&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">&quot;a&quot;</span> <span class="hljs-attr">bar</span>=<span class="hljs-string">&quot;b&quot;</span> <span class="hljs-attr">baz</span>=<span class="hljs-string">&quot;c&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- good --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">img</span></span><br><span class="hljs-tag">  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://vuejs.org/images/logo.png&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Vue Logo&quot;</span></span><br><span class="hljs-tag">&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>元素特性的顺序</p>
+<p>原生属性放前面，指令放后面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript">- <span class="hljs-keyword">class</span><br>  - id,ref<br>  - name<br>  - data-*<br>  - src, <span class="hljs-keyword">for</span>, type, href,value,max-length,max,min,pattern<br>  - title, alt，placeholder<br>  - aria-*, role<br>  - required,readonly,disabled<br>  - is<br>  - v-<span class="hljs-keyword">for</span><br>  - key<br>  - v-<span class="hljs-keyword">if</span><br>  - v-<span class="hljs-keyword">else</span>-<span class="hljs-keyword">if</span><br>  - v-<span class="hljs-keyword">else</span><br>  - v-show<br>  - v-cloak<br>  - v-pre<br>  - v-once<br>  - v-model<br>  - v-bind,:<br>  - v-on,@<br>  - v-html<br>  - v-text<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="🍙其他"><a href="#🍙其他" class="headerlink" title="🍙其他"></a>🍙其他</h4><ul>
+<li>避免 this.$parent</li>
+<li>调试信息 console.log() debugger 使用完及时删除</li>
+<li>除了三目运算，if,else 等禁止简写</li>
+</ul>
+<h2 id="🍢注释规范"><a href="#🍢注释规范" class="headerlink" title="🍢注释规范"></a>🍢注释规范</h2><p>​    代码注释在一个项目的后期维护中显的尤为重要，所以我们要为每一个被复用的组件编写组件使用说明，为组件中每一个方法编写方法说明</p>
+<h4 id="🍙务必添加注释列表"><a href="#🍙务必添加注释列表" class="headerlink" title="🍙务必添加注释列表"></a>🍙务必添加注释列表</h4><ul>
+<li>公共组件使用说明</li>
+<li>各组件中重要函数或者类说明</li>
+<li>复杂的业务逻辑处理说明</li>
+<li>特殊情况的代码处理说明,对于代码中特殊用途的变量、存在临界值、函数中使用的 hack、使用了某种算法或思路等需要进行注释描述</li>
+<li>多重 if 判断语句</li>
+<li>注释块必须以<code>/**（至少两个星号开头）**/</code></li>
+<li>单行注释使用<code>//</code></li>
+</ul>
+<h2 id="🍢CSS规范"><a href="#🍢CSS规范" class="headerlink" title="🍢CSS规范"></a>🍢CSS规范</h2><ul>
+<li><p>统一使用<code>-</code>连字符</p>
+</li>
+<li><p>省略值为 0 时的单位</p>
+</li>
+<li><p>如果 CSS 可以做到，就不要使用 JS</p>
+</li>
+<li><p>建议并适当缩写值，提高可读性，特殊情况除外</p>
+<p>“建议并适当”是因为缩写总是会包含一系列的值，而有时候我们并不希望设置某一值，反而造成了麻烦，那么这时候你可以不缩写，而是分开写。</p>
+<p>当然，在一切可以缩写的情况下，请务必缩写，它最大的好处就是节省了字节，便于维护，并使阅读更加一目了然</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css">// bad<br>  <span class="hljs-selector-class">.box</span>&#123;<br>    <span class="hljs-attribute">border-top-style</span>: none;<br>    <span class="hljs-attribute">font-family</span>: palatino, georgia, serif;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.6</span>;<br>    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">2em</span>;<br>    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1em</span>;<br>    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;<br>    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;<br>  &#125;<br><br>  // good<br>  <span class="hljs-selector-class">.box</span>&#123;<br>    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">font</span>: <span class="hljs-number">100%</span>/<span class="hljs-number">1.6</span> palatino, georgia, serif;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">2em</span>;<br>  &#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>分类的命名方法</p>
+<ul>
+<li>使用单个字母加上<code>-</code>为前缀</li>
+<li>布局（grid）（.g-）</li>
+</ul>
+<img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/wps1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="img" style="zoom:50%;" />
+
+<ul>
+<li>模块（module）（.m-）</li>
+</ul>
+<p><img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/wps2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="img"></p>
+<ul>
+<li>元件（unit）（.u-）</li>
+<li>功能（function）（.f-）</li>
+</ul>
+<img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/wps3.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="img" style="zoom:50%;" />
+
+<ul>
+<li>皮肤（skin）（.s-）</li>
+</ul>
+<img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/wps4.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="img" style="zoom:50%;" />
+
+<ul>
+<li><p>状态（.z-）</p>
+<img   class="lazyload" data-original="https://miedamie.oss-cn-beijing.aliyuncs.com/img/wps5.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="img" style="zoom:50%;" /></li>
+</ul>
+</li>
+</ul>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Gyanga</li>
+    <li><strong>本文链接：</strong><a href="https://gyanga.github.io/2022/07/10/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/index.html" title="https:&#x2F;&#x2F;gyanga.github.io&#x2F;2022&#x2F;07&#x2F;10&#x2F;uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83&#x2F;index.html">https:&#x2F;&#x2F;gyanga.github.io&#x2F;2022&#x2F;07&#x2F;10&#x2F;uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/uni-app/" rel="tag">uni-app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E6%A1%A3/" rel="tag">文档</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2022/07/10/webpack/"><i class="iconfont iconleft"></i>webpack</a>
+    <a href="/2022/07/02/%E5%88%9D%E8%AF%86Electron/">初识Electron<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.7.3/Artalk.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.7.3/Artalk.min.js"></script>
+<div id="Comments"></div>
+<script>
+   window.onload = function () {
+    var loadArtalk =  function () {
+       Artalk.init({
+      el: '#Comments',
+      pageKey: 'https://gyanga.github.io/2022/07/10/uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/',
+      pageTitle: 'uniapp开发规范',
+      server: 'https://www.sky123.top/artalk-gy',
+      site: 'Gyanga'
+    }) }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadArtalk();
+      });
+    } else {
+      loadArtalk();
+    }
+  }
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2uniapp%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83"><span class="toc-text">🍢uniapp开发规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2%E7%BB%93%E6%9E%84%E5%8C%96%E8%A7%84%E8%8C%83"><span class="toc-text">🍢结构化规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2%E7%BB%84%E4%BB%B6%E8%A7%84%E8%8C%83"><span class="toc-text">🍢组件规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">🍢编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83"><span class="toc-text">🍢注释规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8D%A2CSS%E8%A7%84%E8%8C%83"><span class="toc-text">🍢CSS规范</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

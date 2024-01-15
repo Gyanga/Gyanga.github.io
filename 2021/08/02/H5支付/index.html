@@ -192,13 +192,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://framerusercontent.com/images/yt42IQ1hjQEaEkfQezUykULm3sU.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://framerusercontent.com/images/neEYZakygKvVto6QpCxLZdWyhVY.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">H5支付</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 11, 2024</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 02, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2911</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2899</span>
     </div>
   </div>
 </section>
@@ -217,12 +217,10 @@
 <li>支付成功，用户收到支付凭证同时商户后台收到支付成功的通知</li>
 </ol>
 <h2 id="🎈接口流程"><a href="#🎈接口流程" class="headerlink" title="🎈接口流程"></a>🎈接口流程</h2><ol>
-<li>用户下单使用微信进行支付</li>
-<li>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</li>
-</ol>
-<blockquote>
+<li><p>用户下单使用微信进行支付</p>
+</li>
+<li><p>商家后台向微信支付发起下单请求（交易类型trade_type&#x3D;MWEB）</p>
 <p>URL地址：<a target="_blank" rel="noopener" href="https://api.mch.weixin.qq.com/pay/unifiedorder">https://api.mch.weixin.qq.com/pay/unifiedorder</a></p>
-</blockquote>
 <p><strong>请求参数</strong>(必填参数)</p>
 <table>
 <thead>
@@ -300,9 +298,8 @@
 <td>用于上报支付的<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">场景信息</a>（IOS移动应用、安卓移动应用、WAP网站应用、门店信息）</td>
 </tr>
 </tbody></table>
-<ol start="3">
-<li>统一接口返回支付相关参数给商户后台（如支付跳转url）</li>
-</ol>
+</li>
+<li><p>统一接口返回支付相关参数给商户后台（如支付跳转url）</p>
 <p><strong>返回结果</strong></p>
 <table>
 <thead>
@@ -400,13 +397,19 @@
 </tr>
 </tbody></table>
 <p><strong><a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1">错误码</a></strong></p>
-<ol start="4">
-<li>中间页进行H5权限的校验，安全性检查（<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_4">常见问题</a>）</li>
-<li>如支付成功，商户后台会接收到微信侧的异步通知</li>
-<li>用户在完成支付或取消支付后返回商户页面</li>
-<li>商户在展示页面引导用户发起支付结果查询</li>
-<li>商户后台判断是否接收到微信侧的支付结果，没有可调用<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</li>
-<li>展示最终的订单支付结</li>
+</li>
+<li><p>中间页进行H5权限的校验，安全性检查（<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_4">常见问题</a>）</p>
+</li>
+<li><p>如支付成功，商户后台会接收到微信侧的异步通知</p>
+</li>
+<li><p>用户在完成支付或取消支付后返回商户页面</p>
+</li>
+<li><p>商户在展示页面引导用户发起支付结果查询</p>
+</li>
+<li><p>商户后台判断是否接收到微信侧的支付结果，没有可调用<a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_2&index=2">订单查询接口</a>确认</p>
+</li>
+<li><p>展示最终的订单支付结</p>
+</li>
 </ol>
 <h2 id="🎈接口规则"><a href="#🎈接口规则" class="headerlink" title="🎈接口规则"></a>🎈接口规则</h2><h3 id="⚡协议规则"><a href="#⚡协议规则" class="headerlink" title="⚡协议规则"></a>⚡协议规则</h3><ul>
 <li>传输方式：采用HTTPS传输，保证交易安全性</li>
@@ -419,28 +422,32 @@
 <li>判断逻辑：先判断协议字段返回，在判断业务返回，最后判断交易状态</li>
 </ul>
 <h3 id="⚡安全规范"><a href="#⚡安全规范" class="headerlink" title="⚡安全规范"></a>⚡安全规范</h3><ol>
-<li>使用签名算法</li>
-<li>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</li>
-<li>API证书（获取和使用）</li>
-</ol>
+<li><p>使用签名算法</p>
+</li>
+<li><p>随机字符串字段nonce_str使用生成随机数算法，保证签名不可预测</p>
+</li>
+<li><p>API证书（获取和使用）</p>
 <ul>
-<li><p>证书文件应放在有访问权限控制的目录</p>
-</li>
-<li><p>证书文件名应该是复杂且不容易猜测的</p>
-</li>
-<li><p>服务器应该做好病毒和木马防护工作</p>
-<ol start="4">
-<li>客户回调API安全（通过采用HTTPS协议）<br>  5.  获取openid(标识微信用户)</li>
-</ol>
-</li>
+<li>证书文件应放在有访问权限控制的目录</li>
+<li>证书文件名应该是复杂且不容易猜测的</li>
+<li>服务器应该做好病毒和木马防护工作</li>
 </ul>
-<h2 id="🎈实现思路"><a href="#🎈实现思路" class="headerlink" title="🎈实现思路"></a>🎈实现思路</h2><ol>
-<li>支付前的一顿操作……..</li>
-<li>点某个按钮触发跳转到带有微信支付按钮的页面</li>
-<li>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</li>
-<li>微信支付系统根据请求数据生成预支付交易会话标识（prepay_id）并返回过来</li>
-<li>:star:构造微信支付所需参数（请求参数见上）后调用统一下单接口向微信支付发起下单请求</li>
+</li>
+<li><p>客户回调API安全（通过采用HTTPS协议）</p>
+</li>
+<li><p>获取openid(标识微信用户)</p>
+</li>
 </ol>
+<h2 id="🎈实现思路"><a href="#🎈实现思路" class="headerlink" title="🎈实现思路"></a>🎈实现思路</h2><ol>
+<li><p>支付前的一顿操作……..</p>
+</li>
+<li><p>点某个按钮触发跳转到带有微信支付按钮的页面</p>
+</li>
+<li><p>点击微信支付后根据订单相关信息生成支付订单同时调用统一下单接口，对微信支付系统发起请求</p>
+</li>
+<li><p>微信支付系统根据请求数据生成预支付交易会话标识（prepay_id）并返回过来</p>
+</li>
+<li><p>:star:构造微信支付所需参数（请求参数见上）后调用统一下单接口向微信支付发起下单请求</p>
 <ul>
 <li><p>trade_type&#x3D;MWEB</p>
 </li>
@@ -451,19 +458,12 @@
 <li><p>获取用户端ip：获取’REMOTE_ADDR ‘（无代理情况）</p>
 </li>
 <li><p>场景信息(WAP网站应用)：</p>
-<pre><code> &#123;
-   &quot;h5_info&quot;: //h5支付固定传&quot;h5_info&quot;
-      &#123; &quot;type&quot;: &quot;&quot;, //场景类型
-        &quot;wap_url&quot;: &quot;&quot;,//WAP网站URL地址
-        &quot;wap_name&quot;: &quot;&quot; //WAP 网站名
-      &#125;
- &#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;h5_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-comment">//h5支付固定传&quot;h5_info&quot;</span><br>	 <span class="hljs-punctuation">&#123;</span> <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//场景类型</span><br>	   <span class="hljs-attr">&quot;wap_url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-comment">//WAP网站URL地址</span><br>       <span class="hljs-attr">&quot;wap_name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span> <span class="hljs-comment">//WAP 网站名</span><br>     <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>通知地址：接收微信支付异步通知回调地址notify_url</p>
 </li>
 </ul>
-<ol start="6">
+</li>
 <li><p>统一下单接口返回支付相关参数（支付跳转url：meb_url）给商户后台</p>
 </li>
 <li><p>通过mweb_url调起微信支付中间页</p>
@@ -481,11 +481,10 @@
       </section>
       <section class="extra">
         
-          <meta charset="UTF-8">
-<ul class="copyright">
+          <ul class="copyright">
   
     <li><strong>本文作者：</strong>Gyanga</li>
-    <li><strong>本文链接：</strong><a href="https://gyanga.github.io/2024/01/11/H5%E6%94%AF%E4%BB%98/index.html" title="https:&#x2F;&#x2F;gyanga.github.io&#x2F;2024&#x2F;01&#x2F;11&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html">https:&#x2F;&#x2F;gyanga.github.io&#x2F;2024&#x2F;01&#x2F;11&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="https://gyanga.github.io/2021/08/02/H5%E6%94%AF%E4%BB%98/index.html" title="https:&#x2F;&#x2F;gyanga.github.io&#x2F;2021&#x2F;08&#x2F;02&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html">https:&#x2F;&#x2F;gyanga.github.io&#x2F;2021&#x2F;08&#x2F;02&#x2F;H5%E6%94%AF%E4%BB%98&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -496,8 +495,8 @@
 
         
   <nav class="nav">
-    <a></a>
-    <a href="/2024/01/11/webpack/">webpack<i class="iconfont iconright"></i></a>
+    <a href="/2022/07/02/%E5%88%9D%E8%AF%86Electron/"><i class="iconfont iconleft"></i>初识Electron</a>
+    <a href="/2021/04/24/UML---%E7%B1%BB%E5%9B%BE/">UML---类图<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -515,7 +514,7 @@
     var loadArtalk =  function () {
        Artalk.init({
       el: '#Comments',
-      pageKey: 'https://gyanga.github.io/2024/01/11/H5%E6%94%AF%E4%BB%98/',
+      pageKey: 'https://gyanga.github.io/2021/08/02/H5%E6%94%AF%E4%BB%98/',
       pageTitle: 'H5支付',
       server: 'https://www.sky123.top/artalk-gy',
       site: 'Gyanga'
