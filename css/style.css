@@ -64,7 +64,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: var(--color-text);
-  font-family: Hiragino Sans GB;
+  font-family: LXGW WenKai Lite, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
   background-color: var(--color-background);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -981,6 +981,9 @@ body input {
   list-style: none;
   margin: 5px 10px;
 }
+.menu .menu-container .menu-content .menu-item a.active {
+  /* text-decoration: line-through; */
+}
 .menu .menu-container .menu-close {
   position: absolute;
   right: 15px;
@@ -1451,7 +1454,7 @@ body input {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .post .post-item .post-wrap .post-image img:hover {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .post .post-item .post-wrap .post-content {
   position: relative;
@@ -2021,7 +2024,7 @@ body input {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .galleries .wrap .item:hover {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .galleries .wrap .item .title-wrap,
 .galleries .wrap .item img {
@@ -2076,7 +2079,7 @@ body input {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .gallery .wrap .item:hover {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .gallery .wrap .item img {
   position: absolute;
@@ -2102,7 +2105,7 @@ body input {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .gallery .waterfallWrap .item:hover {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .gallery .waterfallWrap .item img {
   display: block;
